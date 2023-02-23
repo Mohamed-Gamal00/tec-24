@@ -1,0 +1,318 @@
+<template>
+  <NavebarCom />
+  <div class="bacgroundimage">
+    <div class="content">
+      <header>
+        <strong>
+          <h1 class="text-end">منصة تك 24</h1>
+        </strong>
+        <p class="text-end fs-5 fw-bold">
+          منصة إلكترونية خليجية تعمل على تقديم الخدمات الإلكترونية المتنوعة
+          للأفراد وأصحاب الأعمال والمشاريع الناشئة لتنفيذ أعمالهم التقنية خلال
+          فترة 24 ساعة.
+        </p>
+      </header>
+      <button type="button" class="btn text-white fw-bold d-block m-2">
+        تسجيل كمقدم خدمة
+      </button>
+      <button type="button" class="btn text-white fw-bold d-block m-2">
+        تسجيل كمستفيد
+      </button>
+    </div>
+  </div>
+  <div class="container-fluid mt-lg-5 mt-sm-2">
+    <!-- برمجة وتطوير -->
+    <div class="row justify-content-center mt-lg-5">
+      <div class="col-md-11">
+        <div>
+          <span class="mt-1">
+            <router-link :to="{ name: 'home' }">الرئيسية</router-link>
+          </span>
+          <p class="fs-4 fw-bold900 cairo">أعمال</p>
+          <p>احصل على الدعم اللازم لتسيير اعمالك بشكل اكثر سلاسة</p>
+        </div>
+        <div class="row justify-content-center">
+          <!-- col4 -->
+          <div class="col-md-4">
+            <input
+              type="text"
+              placeholder="ابحث هنا"
+              class="form-control mb-5"
+              v-model="search"
+            />
+            <!-- title -->
+            <div class="row">
+              <strong>الاقسام</strong>
+              <span class="text-success fw-bold">اعمال</span>
+            </div>
+            <!-- categories -->
+            <div class="card-body">
+              <div class="list-group list-group-flush my-n3">
+                <div class="list-group-item">
+                  <div
+                    class="row align-items-center mt-2 text-gray"
+                    v-for="categorie in filtercategories"
+                    :key="categorie.id"
+                  >
+                    <div class="col">
+                      <span>{{ categorie.title }}</span>
+                      <!-- <div class="my-0 text-muted small">Gear, Bags</div> -->
+                    </div>
+                    <div class="col-auto bg-secondary text-white rounded-2">
+                      <strong>85</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- / .list-group -->
+            </div>
+            <!-- مستوي البائع -->
+            <div class="card-body mt-lg-3">
+              <div class="list-group list-group-flush my-n3">
+                <div class="list-group-item">
+                  <div class="row">
+                    <div class="card-body">
+                      <p class="mb-2 text-gray cairo">مستوي البائع</p>
+                      <!-- بائع موثوق -->
+                      <div class="custom-control custom-checkbox text-gray">
+                        <input
+                          class="form-check-input m-1"
+                          type="checkbox"
+                          value="1"
+                          id="customCheck1"
+                        />
+                        <label class="form-check-label" for="flexCheckDefault"
+                          >بائع موثوق/ مميز</label
+                        >
+                      </div>
+                      <!-- بائع نشيط -->
+                      <div class="custom-control custom-checkbox text-gray">
+                        <input
+                          class="form-check-input m-1"
+                          type="checkbox"
+                          value="1"
+                          id="customCheck1"
+                        />
+                        <label class="form-check-label" for="flexCheckDefault"
+                          >بائع نشيط</label
+                        >
+                      </div>
+                      <!-- بائع جيد -->
+                      <div class="custom-control custom-checkbox text-gray">
+                        <input
+                          class="form-check-input m-1"
+                          type="checkbox"
+                          value="1"
+                          id="customCheck1"
+                        />
+                        <label class="form-check-label" for="flexCheckDefault"
+                          >بائع جديد</label
+                        >
+                      </div>
+                    </div>
+                    <!-- / .card-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- مستوي البائع -->
+            <div class="card-body mt-lg-3">
+              <div class="list-group list-group-flush my-n3">
+                <div class="list-group-item">
+                  <div class="row">
+                    <div class="card-body">
+                      <p class="mb-2 text-gray cairo">حالة البائع</p>
+                      <!-- متواجد حاليا-->
+                      <div class="custom-control custom-checkbox text-gray">
+                        <input
+                          class="form-check-input m-1"
+                          type="checkbox"
+                          value="1"
+                          id="customCheck1"
+                        />
+                        <label class="form-check-label" for="flexCheckDefault"
+                          >متواجد حاليا</label
+                        >
+                      </div>
+                      <!-- هوية موثقة-->
+                      <div class="custom-control custom-checkbox text-gray">
+                        <input
+                          class="form-check-input m-1"
+                          type="checkbox"
+                          value="1"
+                          id="customCheck1"
+                        />
+                        <label class="form-check-label" for="flexCheckDefault"
+                          >هوية موثقة</label
+                        >
+                      </div>
+                    </div>
+                    <!-- / .card-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- col-8 -->
+          <div class="col-md-8 card-section">
+            <div class="row">
+              <div
+                class="col-md-6 col-xl-4 mb-2 pt-1 pb-2"
+                v-for="program in Programming"
+                :key="program"
+              >
+                <div class="card border-0 cards card-2" style="width: 100%">
+                  <img
+                    src="@/assets/images/testimg.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <p
+                      class="card-text cairo fw-bold mb-3"
+                      style="font-size: 12px"
+                    >
+                      مقترح للعمل على اعداد الخطط الاستراتيجيه للمتاجر والشركات.
+                    </p>
+                    <h5
+                      class="card-title cairo text-secondary"
+                      style="font-size: 16px"
+                    >
+                      أعمال/استشارات اعمال
+                    </h5>
+                    <span class="text-secondary"
+                      >تبدأ من <span class="text-dark fw-bold">$5.00</span>
+                    </span>
+                  </div>
+                </div>
+                <!-- .card -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <FooterCom />
+</template>
+
+<script>
+import NavebarCom from "@/components/navbar/NabarCom.vue";
+import FooterCom from "@/components/footer/FooterCom.vue";
+export default {
+  name: "BussinesCom",
+  components: { NavebarCom, FooterCom },
+  data() {
+    return {
+      Programming: [
+        { id: 1 },
+        { id: 2 },
+        { id: 3 },
+        { id: 4 },
+        { id: 5 },
+        { id: 6 },
+        { id: 7 },
+        { id: 8 },
+        { id: 9 },
+      ],
+      search: "",
+      categories: [
+        { id: 1, title: "إدخال بيانات" },
+        { id: 2, title: "استشارات أعمال" },
+        { id: 3, title: "التجارة الالكترونية" },
+        { id: 4, title: "خدمات قانونية" },
+        { id: 5, title: "دراسات وابحاث" },
+        { id: 6, title: "مساعد افتراضي" },
+        { id: 7, title: "خدمات مالية" },
+        { id: 8, title: "برمجة وتطوير" },
+        { id: 9, title: "التسويق الالكتروني" },
+        { id: 10, title: "تدريب عن بعد" },
+        { id: 11, title: "تصميم فيديو" },
+        { id: 12, title: "تصميم" },
+        { id: 13, title: "صوتيات" },
+        { id: 14, title: "كتابة وترجمة" },
+        { id: 15, title: "تدريب عن بعد" },
+        { id: 16, title: "خدمات متنوعه" },
+      ],
+    };
+  },
+  computed: {
+    filtercategories() {
+      return this.categories.filter((categorie) =>
+        categorie.title
+          .toLowerCase()
+          .replace(/أ/gi, "ا")
+          .includes(this.search.toLowerCase())
+      );
+    },
+  },
+};
+</script>
+
+<style scoped>
+* {
+  direction: rtl;
+  overflow: hidden;
+}
+.bacgroundimage {
+  background-image: url("@/assets/images/bg-image.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.content {
+  align-items: center;
+  bottom: 0;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.514);
+  flex-wrap: wrap;
+  font-family: sans-serif;
+  justify-content: center;
+  left: 0;
+  padding: 20vw;
+  right: 0;
+  text-align: center;
+  top: 0;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 30pt;
+}
+
+/* cards */
+.cards {
+  margin: 0 auto;
+  /* text-align: center; */
+  /* display: -webkit-flex;
+    display: flex;
+    border-radius: 10px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    padding: 1.5%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; */
+  border: 1px solid #d3d3d349 !important;
+  box-shadow: 0 3px 6px rgba(180, 180, 180, 0.082),
+    0 3px 6px rgba(116, 116, 116, 0.123);
+  transition: all 0.5s ease-in-out;
+}
+
+.cards:hover {
+  box-shadow: 0 4px 10px rgba(145, 145, 145, 0.16),
+    0 4px 10px rgba(139, 139, 139, 0.23);
+}
+
+@media only screen and (min-width: 992px) {
+  .content {
+    /* height: 580px; */
+  }
+  .btn {
+    width: 30%;
+  }
+}
+</style>

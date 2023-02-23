@@ -2,16 +2,24 @@
 * {
     font-family: 'Almarai', sans-serif;
 }
+@import url("https://fonts.googleapis.com/css2?family=Cairo&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+.cairo {
+  font-family: "Cairo", sans-serif !important;
+}
 .text-purple  {
-    color: #433472 !important; }
+    color: #433472 !important;
+ }
+.text-gray  {
+    color: #7E7D7D !important;
+ }
 button {
     background-color: #433472 !important;
     border: none !important;
 }
-@import url("https://fonts.googleapis.com/css2?family=Cairo&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
-.cairo {
-  font-family: "Cairo", sans-serif;
-}
 a {
     text-decoration: none !important;
 }
+.fw-bold900 {
+    font-weight: 900;
+}
+

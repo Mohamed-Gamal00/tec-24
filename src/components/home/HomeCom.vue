@@ -12,10 +12,10 @@
           فترة 24 ساعة.
         </p>
       </header>
-      <button type="button" class="btn text-white fw-bold d-block m-2">
+      <button type="button" class="btn cairo text-white d-block m-2">
         تسجيل كمقدم خدمة
       </button>
-      <button type="button" class="btn text-white fw-bold d-block m-2">
+      <button type="button" class="btn cairo text-white d-block m-2">
         تسجيل كمستفيد
       </button>
     </div>
@@ -56,7 +56,9 @@
       <div class="col-md-10">
         <div class="cairo mb-4">
           <span class="float-end fw-bold fs-4"> خدمة اعمال </span>
-          <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+          <router-link :to="{ name: 'Bussines' }">
+            <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+          </router-link>
         </div>
         <div class="row justify-content-center">
           <div
@@ -82,7 +84,11 @@
       <div class="col-md-10">
         <div class="cairo mb-4">
           <span class="float-end fw-bold fs-4">خدمات البرمجة والتطوير</span>
-          <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+          <span class="float-start mt-1">
+            <router-link :to="{ name: 'programming' }"
+              >مشاهدة المزيد</router-link
+            >
+          </span>
         </div>
         <div class="row justify-content-center">
           <div
@@ -108,7 +114,9 @@
       <div class="col-md-10">
         <div class="cairo mb-4">
           <span class="float-end fw-bold fs-4">خدمات التسويق الاليكتروني</span>
-          <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+          <router-link :to="{ name: 'marketing' }">
+            <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+          </router-link>
         </div>
         <div class="row justify-content-center">
           <div
@@ -172,7 +180,7 @@
           >
             <div class="card border-0 cardImg" style="width: 100%">
               <img
-                src="@/assets/images/learning.jpg"
+                src="@/assets/images/creative.svg"
                 class="card-img-top"
                 alt="..."
               />
@@ -196,7 +204,7 @@
           >
             <div class="card border-0 cardImg" style="width: 100%">
               <img
-                src="@/assets/images/learning.jpg"
+                src="@/assets/images/video.png"
                 class="card-img-top"
                 alt="..."
               />
@@ -220,7 +228,7 @@
           >
             <div class="card border-0 cardImg" style="width: 100%">
               <img
-                src="@/assets/images/learning.jpg"
+                src="@/assets/images/design.png"
                 class="card-img-top"
                 alt="..."
               />
@@ -244,7 +252,7 @@
           >
             <div class="card border-0 cardImg" style="width: 100%">
               <img
-                src="@/assets/images/learning.jpg"
+                src="@/assets/images/voice.png"
                 class="card-img-top"
                 alt="..."
               />
