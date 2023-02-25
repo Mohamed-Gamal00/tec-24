@@ -57,7 +57,7 @@
         <div class="cairo mb-4">
           <span class="float-end fw-bold fs-4"> خدمة اعمال </span>
           <router-link :to="{ name: 'Bussines' }">
-            <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+            <span class="float-start mt-1"><a>مشاهدة المزيد</a></span>
           </router-link>
         </div>
         <div class="row justify-content-center">
@@ -115,7 +115,7 @@
         <div class="cairo mb-4">
           <span class="float-end fw-bold fs-4">خدمات التسويق الاليكتروني</span>
           <router-link :to="{ name: 'marketing' }">
-            <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+            <span class="float-start mt-1"><a>مشاهدة المزيد</a></span>
           </router-link>
         </div>
         <div class="row justify-content-center">
@@ -143,7 +143,7 @@
         <div class="cairo mb-4">
           <span class="float-end fw-bold fs-4">خدمات تدريب عن بعد</span>
           <RouterLink :to="{ name: 'learning' }">
-            <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+            <span class="float-start mt-1"><a>مشاهدة المزيد</a></span>
           </RouterLink>
         </div>
         <div class="row justify-content-center">
@@ -172,7 +172,9 @@
           <span class="float-end fw-bold fs-4"
             >كافة الخدمات الإبداعية والاحترافية</span
           >
-          <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+          <router-link :to="{ name: 'creativity' }">
+            <span class="float-start mt-1"><a>مشاهدة المزيد</a></span>
+          </router-link>
         </div>
         <div class="row justify-content-center">
           <div
@@ -197,7 +199,7 @@
         <div class="cairo mb-4">
           <span class="float-end fw-bold fs-4">خدمات تصميم فيديو</span>
           <router-link :to="{ name: 'video' }">
-            <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+            <span class="float-start mt-1"><a>مشاهدة المزيد</a></span>
           </router-link>
         </div>
         <div class="row justify-content-center">
@@ -223,7 +225,7 @@
         <div class="cairo mb-4">
           <span class="float-end fw-bold fs-4">خدمات تصميم </span>
           <router-link :to="{ name: 'design' }">
-            <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+            <span class="float-start mt-1"><a>مشاهدة المزيد</a></span>
           </router-link>
         </div>
         <div class="row justify-content-center">
@@ -248,7 +250,9 @@
       <div class="col-md-10">
         <div class="cairo mb-4">
           <span class="float-end fw-bold fs-4">خدمات صوتيات </span>
-          <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+          <router-link :to="{ name: 'voice' }">
+            <span class="float-start mt-1"><a>مشاهدة المزيد</a></span>
+          </router-link>
         </div>
         <div class="row justify-content-center">
           <div
@@ -356,7 +360,6 @@ export default {
       const accordionItemHeaders = document.querySelectorAll(
         ".accordion-item-header"
       );
-
       accordionItemHeaders.forEach((accordionItemHeader) => {
         accordionItemHeader.addEventListener("click", () => {
           accordionItemHeader.classList.toggle("active");
@@ -406,55 +409,6 @@ h1 {
   font-weight: 900;
   font-size: 30pt;
 }
-/* fqa */
-.accordion-item {
-  background-color: #fff;
-  color: #111;
-  margin: 1rem 0;
-  /* border-radius: 0.5rem; */
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25); */
-}
-.accordion-item-header {
-  padding: 0.5rem 3rem 0.5rem 3rem;
-  min-height: 3.5rem;
-  line-height: 1.25rem;
-  font-weight: bold;
-  display: flex;
-  /* align-items: center; */
-  justify-content: space-between;
-  position: relative;
-  cursor: pointer;
-}
-.accordion-item-header::after {
-  content: "\002B";
-  font-size: 1rem;
-  position: absolute;
-  left: 1rem;
-}
-.accordion-item-header.active::after {
-  content: "\2212";
-}
-.accordion-item-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-.accordion-item-body-content {
-  padding: 0.5rem 3rem;
-  line-height: 1.5rem;
-  border-top: 1px solid;
-  border-image: linear-gradient(to left, transparent, #34495e, transparent) 1;
-}
-
-@media (max-width: 767px) {
-  html {
-    font-size: 14px;
-  }
-}
-/* end faq */
 @media only screen and (min-width: 992px) {
   .content {
     /* height: 580px; */

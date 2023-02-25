@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <CreativityCom />
+    <VoiceservCom />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import CreativityCom from "@/components/creativity/CreativityCom.vue";
+import VoiceservCom from "@/components/voice/VoiceservCom.vue";
 
 export default {
-  name: "CreativityView",
+  name: "VoiceservView",
   components: {
-    CreativityCom,
+    VoiceservCom,
   },
 };
 </script>

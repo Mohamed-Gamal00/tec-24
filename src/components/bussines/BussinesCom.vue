@@ -12,10 +12,10 @@
           فترة 24 ساعة.
         </p>
       </header>
-      <button type="button" class="btn text-white fw-bold d-block m-2">
+      <button type="button" class="btn text-white d-block m-2">
         تسجيل كمقدم خدمة
       </button>
-      <button type="button" class="btn text-white fw-bold d-block m-2">
+      <button type="button" class="btn text-white d-block m-2">
         تسجيل كمستفيد
       </button>
     </div>
@@ -41,9 +41,37 @@
               v-model="search"
             />
             <!-- title -->
-            <div class="row">
+            <div class="row categories">
               <strong>الاقسام</strong>
-              <span class="text-success fw-bold">اعمال</span>
+              <router-link :to="{ name: 'Bussines' }">
+                <span>اعمال</span>
+              </router-link>
+              <router-link :to="{ name: 'programming' }">
+                <span>برمجة و تطوير</span>
+              </router-link>
+              <router-link :to="{ name: 'marketing' }">
+                <span> تسويق اليكتروني</span>
+              </router-link>
+
+              <router-link :to="{ name: 'learning' }">
+                <span>تدريب عن بعد</span>
+              </router-link>
+
+              <router-link :to="{ name: 'creativity' }">
+                <span>خدمات ابداعية واحترافية</span>
+              </router-link>
+
+              <router-link :to="{ name: 'video' }">
+                <span>تصميم فيديو</span>
+              </router-link>
+
+              <router-link :to="{ name: 'design' }">
+                <span>تصميم</span>
+              </router-link>
+
+              <router-link :to="{ name: 'voice' }">
+                <span>صوتيات</span>
+              </router-link>
             </div>
             <!-- categories -->
             <div class="card-body">

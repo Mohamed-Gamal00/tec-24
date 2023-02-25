@@ -12,26 +12,24 @@
           فترة 24 ساعة.
         </p>
       </header>
-      <button type="button" class="btn text-white d-block m-2">
+      <button type="button" class="btn text-white d-block m-2 cairo">
         تسجيل كمقدم خدمة
       </button>
-      <button type="button" class="btn text-white d-block m-2">
+      <button type="button" class="btn text-white d-block m-2 cairo">
         تسجيل كمستفيد
       </button>
     </div>
   </div>
   <div class="container-fluid mt-lg-5 mt-sm-2">
-    <!-- برمجة وتطوير -->
+    <!-- التعليم عن بعد -->
     <div class="row justify-content-center mt-lg-5">
       <div class="col-md-11">
         <div>
           <span class="mt-1">
             <router-link :to="{ name: 'home' }">الرئيسية</router-link>
           </span>
-          <p class="fs-4 fw-bold900 cairo">برمجة وتطوير</p>
-          <p>
-            استعن بخدمات افضل المبرمجين والمطورين لبناء مواقع وتطبيقات احترافية
-          </p>
+          <p class="fs-4 fw-bold900 cairo">صوتيات</p>
+          <p>اشبع شغفك بالتعلم وتدرب في اهم المجالات عبر الانترنت</p>
         </div>
         <div class="row justify-content-center">
           <!-- col4 -->
@@ -193,7 +191,7 @@
               >
                 <div class="card border-0 cards card-2" style="width: 100%">
                   <img
-                    src="@/assets/images/web1.webp"
+                    src="@/assets/images/voice.png"
                     class="card-img-top"
                     alt="..."
                   />
@@ -230,7 +228,7 @@
 import NavebarCom from "@/components/navbar/NabarCom.vue";
 import FooterCom from "@/components/footer/FooterCom.vue";
 export default {
-  name: "ProgrammingCom",
+  name: "VoiceservCom",
   components: { NavebarCom, FooterCom },
   data() {
     return {
@@ -247,23 +245,21 @@ export default {
       ],
       search: "",
       categories: [
-        { id: 1, title: "أنظمة إدارة المحتوى " },
-        { id: 2, title: "لختبارات تجريبية" },
-        { id: 3, title: "السيرفرات ولينكس" },
-        { id: 4, title: "برمجة css ,html" },
-        { id: 5, title: "برمجة java , .Net" },
-        { id: 6, title: "برمجة php" },
-        { id: 7, title: "برمجة بايثون" },
-        { id: 8, title: "برمجة تطبيقات الجوال" },
-        { id: 9, title: "تطبيقات سطح المكتب" },
-        { id: 10, title: "تطوير متاجر الكترونية" },
-        { id: 11, title: "خدمات مدونات بلوجر" },
-        { id: 12, title: "خدمات وورد بريس" },
-        { id: 13, title: "دعم فني تقني" },
-        { id: 14, title: "التسويق الالكتروني" },
-        { id: 15, title: "تدريب عن بعد" },
-        { id: 16, title: "تصميم فيديو" },
-        { id: 17, title: "تصميم" },
+        { id: 1, title: "استشارات شخصية" },
+        { id: 2, title: "الصحة واللياقة البدنية" },
+        { id: 3, title: "تعلم اللغة الانجليزية" },
+        { id: 4, title: "فنون وحرف" },
+        { id: 5, title: "التسويق بالمحتوى" },
+        { id: 17, title: "نصائح سياحة وسفر" },
+        { id: 18, title: "مساعدة لحل الواجبات" },
+        { id: 19, title: "التسويق الالكتروني" },
+        { id: 20, title: "تدريب عن بعد" },
+        { id: 21, title: "تصميم فيديو" },
+        { id: 22, title: "تصميم" },
+        { id: 23, title: "صوتيات" },
+        { id: 24, title: "كتابة وترجمة" },
+        { id: 25, title: "تدريب عن بعد" },
+        { id: 26, title: "خدمات متنوعه" },
       ],
     };
   },
@@ -273,6 +269,7 @@ export default {
         categorie.title
           .toLowerCase()
           .replace(/أ/gi, "ا")
+          .replace(/إ/gi, "ا")
           .includes(this.search.toLowerCase())
       );
     },
@@ -316,17 +313,17 @@ h1 {
   margin: 0 auto;
   /* text-align: center; */
   /* display: -webkit-flex;
-  display: flex;
-  border-radius: 10px;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-top: 15px;
-  padding: 1.5%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; */
+              display: flex;
+              border-radius: 10px;
+              -webkit-justify-content: center;
+              justify-content: center;
+              -webkit-flex-wrap: wrap;
+              flex-wrap: wrap;
+              margin-top: 15px;
+              padding: 1.5%;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box; */
   border: 1px solid #d3d3d349 !important;
   box-shadow: 0 3px 6px rgba(180, 180, 180, 0.082),
     0 3px 6px rgba(116, 116, 116, 0.123);

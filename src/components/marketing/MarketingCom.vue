@@ -41,11 +41,37 @@
               v-model="search"
             />
             <!-- title -->
-            <div class="row">
+            <div class="row categories">
               <strong>الاقسام</strong>
-              <span>اعمال</span>
-              <span>برمجة و تطوير</span>
-              <span class="text-success fw-bold"> تسويق اليكتروني</span>
+              <router-link :to="{ name: 'Bussines' }">
+                <span>اعمال</span>
+              </router-link>
+              <router-link :to="{ name: 'programming' }">
+                <span>برمجة و تطوير</span>
+              </router-link>
+              <router-link :to="{ name: 'marketing' }">
+                <span> تسويق اليكتروني</span>
+              </router-link>
+
+              <router-link :to="{ name: 'learning' }">
+                <span>تدريب عن بعد</span>
+              </router-link>
+
+              <router-link :to="{ name: 'creativity' }">
+                <span>خدمات ابداعية واحترافية</span>
+              </router-link>
+
+              <router-link :to="{ name: 'video' }">
+                <span>تصميم فيديو</span>
+              </router-link>
+
+              <router-link :to="{ name: 'design' }">
+                <span>تصميم</span>
+              </router-link>
+
+              <router-link :to="{ name: 'voice' }">
+                <span>صوتيات</span>
+              </router-link>
             </div>
             <!-- categories -->
             <div class="card-body">
@@ -319,13 +345,18 @@ h1 {
   box-shadow: 0 4px 10px rgba(145, 145, 145, 0.16),
     0 4px 10px rgba(139, 139, 139, 0.23);
 }
-
 @media only screen and (min-width: 992px) {
   .content {
     /* height: 580px; */
   }
   .btn {
     width: 30%;
+  }
+  .cardImg {
+    height: 200px;
+  }
+  .cardImg img {
+    height: 200px;
   }
 }
 </style>

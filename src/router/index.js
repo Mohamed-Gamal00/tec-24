@@ -6,6 +6,8 @@ import MarketingView from "../views/MarketingView.vue";
 import ElearningView from "../views/ElearningView.vue";
 import VideoView from "../views/VideoView.vue";
 import DesignView from "../views/DesignView.vue";
+import CreativityView from "../views/CreativityView.vue";
+import VoiceservView from "../views/VoiceservView";
 
 const routes = [
   {
@@ -43,6 +45,11 @@ const routes = [
     component: ElearningView,
   },
   {
+    path: "/creativity",
+    name: "creativity",
+    component: CreativityView,
+  },
+  {
     path: "/video",
     name: "video",
     component: VideoView,
@@ -51,6 +58,11 @@ const routes = [
     path: "/design",
     name: "design",
     component: DesignView,
+  },
+  {
+    path: "/voice",
+    name: "voice",
+    component: VoiceservView,
   },
 ];
 

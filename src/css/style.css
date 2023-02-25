@@ -1,25 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
 * {
     font-family: 'Almarai', sans-serif;
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Cairo&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
 .cairo {
-  font-family: "Cairo", sans-serif !important;
+    font-family: "Cairo", sans-serif !important;
 }
-.text-purple  {
+
+.text-purple {
     color: #433472 !important;
- }
-.text-gray  {
+}
+
+.text-gray {
     color: #7E7D7D !important;
- }
+}
+
 button {
     background-color: #433472 !important;
     border: none !important;
+    font-family: "Cairo", sans-serif !important;
 }
+
 a {
     text-decoration: none !important;
 }
+
 .fw-bold900 {
     font-weight: 900;
 }
 
+/* fqa */
+.accordion-item {
+    background-color: #fff;
+    color: #111;
+    margin: 1rem 0;
+    /* border-radius: 0.5rem; */
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25); */
+}
+
+.accordion-item-header {
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+}
+
+.accordion-item-header::after {
+    content: "\002B";
+    font-size: 1rem;
+    position: absolute;
+    left: 1rem;
+}
+
+.accordion-item-header.active::after {
+    content: "\2212";
+}
+
+.accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content {
+    padding: 0.5rem 3rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to left, transparent, #34495e, transparent) 1;
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* end faq */
+/* .categories span {
+    color: #7E7D7D !important;
+} */
+.categories a {
+    color: #6b6a6d;
+    transition: all 0.3s ease-in-out;
+}
+
+.categories a:hover {
+    color: #1bd468a1;
+}
+
+.categories a.router-link-exact-active {
+    padding: 5px;
+    font-weight: bold;
+    color: #1bd468 !important;
+    transition: all 0.3s ease-in-out;
+    background-color: #205c390a;
+}
+
+.router-link-exact-active:hover {
+    padding: 5px;
+    font-weight: bold;
+    /* color: #1bd468a1 !important; */
+}
