@@ -28,8 +28,10 @@
           <span class="mt-1">
             <router-link :to="{ name: 'home' }">الرئيسية</router-link>
           </span>
-          <p class="fs-4 fw-bold900 cairo">التسويق الالكتروني</p>
-          <p>سوق علامتك التجارية على مختلف المنصات واصنع لها حضورا بارزا</p>
+          <p class="fs-4 fw-bold900 cairo">تصميم</p>
+          <p>
+            وظف مصممين محترفيين يمزجون التقنية بالايداع لتحقيق اهدافك التسويقية
+          </p>
         </div>
         <div class="row justify-content-center">
           <!-- col4 -->
@@ -45,7 +47,10 @@
               <strong>الاقسام</strong>
               <span>اعمال</span>
               <span>برمجة و تطوير</span>
-              <span class="text-success fw-bold"> تسويق اليكتروني</span>
+              <span> تسويق اليكتروني</span>
+              <span>تدريب عن بعد</span>
+              <span>تصميم فيديو</span>
+              <span class="text-success fw-bold">تصميم</span>
             </div>
             <!-- categories -->
             <div class="card-body">
@@ -165,9 +170,9 @@
               >
                 <div class="card border-0 cards card-2" style="width: 100%">
                   <img
-                    src="@/assets/images/marketing.jpg"
+                    src="@/assets/images/design.png"
                     class="card-img-top"
-                    alt="..."
+                    alt="img"
                   />
                   <div class="card-body">
                     <p
@@ -202,7 +207,7 @@
 import NavebarCom from "@/components/navbar/NabarCom.vue";
 import FooterCom from "@/components/footer/FooterCom.vue";
 export default {
-  name: "MarketingCom",
+  name: "DesignCom",
   components: { NavebarCom, FooterCom },
   data() {
     return {
@@ -219,22 +224,11 @@ export default {
       ],
       search: "",
       categories: [
-        { id: 1, title: "إدارة حسابات التواصل الاجتماعي " },
-        { id: 2, title: "إعلانات المواقع" },
-        { id: 3, title: "استشارات تسويقية" },
-        { id: 4, title: "الإعلانات والتسويق على الجوال" },
+        { id: 1, title: "تصميم صور متحركة" },
+        { id: 2, title: "موشن جرافيك" },
+        { id: 3, title: "مونتاج فيديو" },
+        { id: 4, title: "وايت بورد" },
         { id: 5, title: "التسويق بالمحتوى" },
-        { id: 6, title: "التسويق عبر البريد الالكتروني" },
-        { id: 7, title: "التسويق عبر انستجرام" },
-        { id: 8, title: "برمجة تطبيقات الجوال" },
-        { id: 9, title: "تطبيقات سطح المكتب" },
-        { id: 10, title: "التسويق عبر تيك توك" },
-        { id: 11, title: "التسويق عبر محركات البحث SEM" },
-        { id: 12, title: "التسويق على تويتر" },
-        { id: 13, title: "التسويق على سناب شات" },
-        { id: 14, title: "التسويق على فيسبوك" },
-        { id: 15, title: "تحليلات المواقع" },
-        { id: 16, title: "تحليلات المواقع" },
         { id: 17, title: "تصميم" },
         { id: 18, title: "برمجة وتطوير" },
         { id: 19, title: "التسويق الالكتروني" },
@@ -298,17 +292,17 @@ h1 {
   margin: 0 auto;
   /* text-align: center; */
   /* display: -webkit-flex;
-    display: flex;
-    border-radius: 10px;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-top: 15px;
-    padding: 1.5%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; */
+      display: flex;
+      border-radius: 10px;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-top: 15px;
+      padding: 1.5%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; */
   border: 1px solid #d3d3d349 !important;
   box-shadow: 0 3px 6px rgba(180, 180, 180, 0.082),
     0 3px 6px rgba(116, 116, 116, 0.123);

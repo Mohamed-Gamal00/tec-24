@@ -3,6 +3,9 @@ import HomeView from "../views/HomeView.vue";
 import ProgrammingView from "../views/ProgrammingView.vue";
 import BussinesView from "../views/BussinesView.vue";
 import MarketingView from "../views/MarketingView.vue";
+import ElearningView from "../views/ElearningView.vue";
+import VideoView from "../views/VideoView.vue";
+import DesignView from "../views/DesignView.vue";
 
 const routes = [
   {
@@ -33,6 +36,21 @@ const routes = [
     path: "/marketing",
     name: "marketing",
     component: MarketingView,
+  },
+  {
+    path: "/learning",
+    name: "learning",
+    component: ElearningView,
+  },
+  {
+    path: "/video",
+    name: "video",
+    component: VideoView,
+  },
+  {
+    path: "/design",
+    name: "design",
+    component: DesignView,
   },
 ];
 

@@ -142,7 +142,9 @@
       <div class="col-md-10">
         <div class="cairo mb-4">
           <span class="float-end fw-bold fs-4">خدمات تدريب عن بعد</span>
-          <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+          <RouterLink :to="{ name: 'learning' }">
+            <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+          </RouterLink>
         </div>
         <div class="row justify-content-center">
           <div
@@ -194,7 +196,9 @@
       <div class="col-md-10">
         <div class="cairo mb-4">
           <span class="float-end fw-bold fs-4">خدمات تصميم فيديو</span>
-          <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+          <router-link :to="{ name: 'video' }">
+            <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+          </router-link>
         </div>
         <div class="row justify-content-center">
           <div
@@ -218,7 +222,9 @@
       <div class="col-md-10">
         <div class="cairo mb-4">
           <span class="float-end fw-bold fs-4">خدمات تصميم </span>
-          <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+          <router-link :to="{ name: 'design' }">
+            <span class="float-start mt-1"><a href="#">مشاهدة المزيد</a></span>
+          </router-link>
         </div>
         <div class="row justify-content-center">
           <div

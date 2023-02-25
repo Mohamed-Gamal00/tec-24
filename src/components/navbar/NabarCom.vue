@@ -57,6 +57,9 @@
 <script>
 export default {
   name: "NavebarCom",
+  // mounted() {
+  //   window.scrollTo(0, 0);
+  // },
 };
 </script>
 
