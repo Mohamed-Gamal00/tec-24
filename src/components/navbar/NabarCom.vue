@@ -5,9 +5,9 @@
       style="background-color: #433472"
     >
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <router-link :to="{ name: 'home' }">
           <img src="../../assets/images/24.png" width="50" />
-        </a>
+        </router-link>
 
         <button
           class="navbar-toggler bg-white"

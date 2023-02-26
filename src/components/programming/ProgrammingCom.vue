@@ -191,7 +191,7 @@
                 v-for="program in Programming"
                 :key="program"
               >
-                <div class="card border-0 cards card-2" style="width: 100%">
+                <div class="card border-0 cards" style="width: 100%">
                   <img
                     src="@/assets/images/web1.webp"
                     class="card-img-top"
@@ -216,6 +216,35 @@
                   </div>
                 </div>
                 <!-- .card -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FAQ -->
+    <div class="row justify-content-center mt-lg-5">
+      <div class="col-md-10 cairo">
+        <h3 class="text-center fw-bold">
+          احصل على افضل خدمات البرمجة والتطوير لمشروعك دون الحاجة لمعرفة برمجية
+          متعقمة
+        </h3>
+        <h5 class="text-center text-gray lh-base">
+          هنا حيث افضل المبرمجين والمطورين العرب الذين يقدمون شتى خدمات البرمجه
+          عالية الجودة في مجالات بناء المواقع وبرمجة تطبيقات الجوال وأنظمة إدارة
+          المحتوى وغيرها وفق احدث المعايير وافضل الممارسات المعمول بها. وباسعار
+          ف المتناول
+        </h5>
+        <div class="container-fluid mt-3" style="cursor: pointer">
+          <div class="accordion">
+            <div class="accordion-item" v-for="faq in faqs" :key="faq">
+              <div class="accordion-item-header">
+                {{ faq.question }}
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  {{ faq.desc }}
+                </div>
               </div>
             </div>
           </div>
@@ -265,6 +294,29 @@ export default {
         { id: 16, title: "تصميم فيديو" },
         { id: 17, title: "تصميم" },
       ],
+      faqs: [
+        {
+          id: 1,
+          question: "ما هي خدمات البرمجة والتطوير؟",
+          desc: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى",
+        },
+        {
+          id: 2,
+          question: "كيف اختار المبرمج المناسب؟",
+          desc: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى",
+        },
+        {
+          id: 3,
+          question:
+            "هل خدمات البرمجة تشمل جميع التفاصيل المطلوبة لاطلاق الموقع والتطبيق؟",
+          desc: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى",
+        },
+        {
+          id: 4,
+          question: "كيف أحصل على خدمات الاعمال؟",
+          desc: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى",
+        },
+      ],
     };
   },
   computed: {
@@ -275,6 +327,28 @@ export default {
           .replace(/أ/gi, "ا")
           .includes(this.search.toLowerCase())
       );
+    },
+  },
+  mounted() {
+    this.faq();
+  },
+  methods: {
+    faq() {
+      const accordionItemHeaders = document.querySelectorAll(
+        ".accordion-item-header"
+      );
+      accordionItemHeaders.forEach((accordionItemHeader) => {
+        accordionItemHeader.addEventListener("click", () => {
+          accordionItemHeader.classList.toggle("active");
+          const accordionItemBody = accordionItemHeader.nextElementSibling;
+          if (accordionItemHeader.classList.contains("active")) {
+            accordionItemBody.style.maxHeight =
+              accordionItemBody.scrollHeight + "px";
+          } else {
+            accordionItemBody.style.maxHeight = 0;
+          }
+        });
+      });
     },
   },
 };

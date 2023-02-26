@@ -87,9 +87,8 @@ a {
 }
 
 /* end faq */
-/* .categories span {
-    color: #7E7D7D !important;
-} */
+
+/* router link style */
 .categories a {
     color: #6b6a6d;
     transition: all 0.3s ease-in-out;
@@ -107,8 +106,15 @@ a {
     background-color: #205c390a;
 }
 
-.router-link-exact-active:hover {
-    padding: 5px;
-    font-weight: bold;
-    /* color: #1bd468a1 !important; */
+
+/* media query */
+@media only screen and (min-width: 992px) {
+    .cards {
+        width: 100%;
+    }
+
+    .cards img {
+        height: 190px;
+        object-fit: contain;
+    }
 }

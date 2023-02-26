@@ -189,7 +189,7 @@
                 v-for="program in Programming"
                 :key="program"
               >
-                <div class="card border-0 cards card-2" style="width: 100%">
+                <div class="card border-0 cards" style="width: 100%">
                   <img
                     src="@/assets/images/learning.jpg"
                     class="card-img-top"
@@ -214,6 +214,33 @@
                   </div>
                 </div>
                 <!-- .card -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FAQ -->
+    <div class="row justify-content-center mt-lg-5">
+      <div class="col-md-10 cairo">
+        <h3 class="text-center fw-bold">
+          أثر معرفتك في الوقت الذي يناسبك وبالطريثة التي تفضلها
+        </h3>
+        <h5 class="text-center text-gray lh-base">
+          يوفر خمسات-ضمن ما يوفره من خدمات بيئة تعلم وتدريب عبر الانترنت سهلة
+          الاستخدام تشمل مجالات تخصص متعدده وتقدم خدمات التدرييب لخيارات تناسب
+          اختياجك وظروفك لتكون خيارك الأفضل في تعلم المعرفة التي تسعى لاكتسابها
+        </h5>
+        <div class="container-fluid mt-3" style="cursor: pointer">
+          <div class="accordion">
+            <div class="accordion-item" v-for="faq in faqs" :key="faq">
+              <div class="accordion-item-header">
+                {{ faq.question }}
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  {{ faq.desc }}
+                </div>
               </div>
             </div>
           </div>
@@ -261,6 +288,29 @@ export default {
         { id: 25, title: "تدريب عن بعد" },
         { id: 26, title: "خدمات متنوعه" },
       ],
+      faqs: [
+        {
+          id: 1,
+          question:
+            "ما المجالات التي استطيع الحصول فيها على خدمات تدريب عن بعد؟",
+          desc: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى",
+        },
+        {
+          id: 2,
+          question: "ما هي طرق الحصول على التدريب عن بعد؟",
+          desc: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى",
+        },
+        {
+          id: 3,
+          question: "هل احصل على شهادة بعد إتمام التدريب المعروض",
+          desc: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى",
+        },
+        {
+          id: 4,
+          question: "ما مدى خبرة المدربين عن بعد؟",
+          desc: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى",
+        },
+      ],
     };
   },
   computed: {
@@ -272,6 +322,28 @@ export default {
           .replace(/إ/gi, "ا")
           .includes(this.search.toLowerCase())
       );
+    },
+  },
+  mounted() {
+    this.faq();
+  },
+  methods: {
+    faq() {
+      const accordionItemHeaders = document.querySelectorAll(
+        ".accordion-item-header"
+      );
+      accordionItemHeaders.forEach((accordionItemHeader) => {
+        accordionItemHeader.addEventListener("click", () => {
+          accordionItemHeader.classList.toggle("active");
+          const accordionItemBody = accordionItemHeader.nextElementSibling;
+          if (accordionItemHeader.classList.contains("active")) {
+            accordionItemBody.style.maxHeight =
+              accordionItemBody.scrollHeight + "px";
+          } else {
+            accordionItemBody.style.maxHeight = 0;
+          }
+        });
+      });
     },
   },
 };
