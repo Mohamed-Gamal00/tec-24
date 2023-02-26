@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import ProgrammingView from "../views/ProgrammingView.vue";
-import BussinesView from "../views/BussinesView.vue";
-import MarketingView from "../views/MarketingView.vue";
-import ElearningView from "../views/ElearningView.vue";
-import VideoView from "../views/VideoView.vue";
-import DesignView from "../views/DesignView.vue";
-import CreativityView from "../views/CreativityView.vue";
-import VoiceservView from "../views/VoiceservView";
+import HomeView from "../views/home/HomeView.vue";
+import ProgrammingView from "../views/programming/ProgrammingView.vue";
+import BussinesView from "../views/bussines/BussinesView.vue";
+import MarketingView from "../views/marketing/MarketingView.vue";
+import ElearningView from "../views/elearning/ElearningView.vue";
+import VideoView from "../views/designVideo/VideoView.vue";
+import DesignView from "../views/design/DesignView.vue";
+import CreativityView from "../views/creative/CreativityView.vue";
+import VoiceservView from "../views/voice/VoiceservView";
 
 const routes = [
   {
