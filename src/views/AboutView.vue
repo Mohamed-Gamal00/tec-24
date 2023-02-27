@@ -1,5 +1,19 @@
 <template>
   <div class="about">about</div>
+  <div class="star-rating">
+    <span>&star;</span>
+    <span>&star;</span>
+    <span>&star;</span>
+    <span>&star;</span>
+    <span>&star;</span>
+    <div class="star-rating__current">
+      <span>&starf;</span>
+      <span>&starf;</span>
+      <span>&starf;</span>
+      <span>&starf;</span>
+      <span>&starf;</span>
+    </div>
+  </div>
   <input type="text" v-model="search" />
   <div v-for="categorie in filtercategories" :key="categorie.id">
     <h3>{{ categorie.title }}</h3>
@@ -26,4 +40,15 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+<style scoped>
+.star-rating {
+  display: inline;
+  color: gold;
+  font-size: 4rem;
+  position: relative;
+}
+.star-rating__current {
+  position: absolute;
+  top: -13px;
+}
+</style>

@@ -10,7 +10,7 @@
         </router-link>
 
         <button
-          class="navbar-toggler bg-transparent border-0"
+          class="navbar-toggler bg-transparent"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavDropdown"

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/home/HomeView.vue";
 import ProgrammingView from "../views/programming/ProgrammingView.vue";
 import BussinesView from "../views/bussines/BussinesView.vue";
+import SubbussinesView from "../views/bussines/SubbussinesView.vue";
 import MarketingView from "../views/marketing/MarketingView.vue";
 import ElearningView from "../views/elearning/ElearningView.vue";
 import VideoView from "../views/designVideo/VideoView.vue";
@@ -28,6 +29,11 @@ const routes = [
     path: "/Bussines",
     name: "Bussines",
     component: BussinesView,
+  },
+  {
+    path: "/subbussines",
+    name: "subbussines",
+    component: SubbussinesView,
   },
   {
     path: "/programming",
