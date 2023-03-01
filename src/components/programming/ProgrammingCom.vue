@@ -12,12 +12,16 @@
           فترة 24 ساعة.
         </p>
       </header>
-      <button type="button" class="btn text-white d-block m-2">
-        تسجيل كمقدم خدمة
-      </button>
-      <button type="button" class="btn text-white d-block m-2">
-        تسجيل كمستفيد
-      </button>
+      <router-link class="text-white" :to="{ name: 'register' }">
+        <button type="button" class="btn cairo text-white d-block m-2">
+          تسجيل كمقدم خدمة
+        </button>
+      </router-link>
+      <router-link class="text-white" :to="{ name: 'register' }">
+        <button type="button" class="btn cairo text-white d-block m-2">
+          تسجيل كمستفيد
+        </button>
+      </router-link>
     </div>
   </div>
   <div class="container-fluid mt-lg-5 mt-sm-2">

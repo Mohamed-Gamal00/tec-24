@@ -3,7 +3,7 @@
   <div class="container-fluid bg-light p-0">
     <div class="row justify-content-center mt-lg-5">
       <div class="row">
-        <div class="col-md-8 bg-light pt-lg-3 mb-lg-3">
+        <div class="col-md-12 col-lg-8 bg-light pt-lg-3 mb-lg-3">
           <!-- slider -->
           <div class="bg-white ps-lg-4 pe-lg-4 pt-lg-4">
             <SliderCom />
@@ -47,7 +47,7 @@
               <div class="list-group-item ps-lg-4 pe-lg-4">
                 <div class="row">
                   <div class="card-body p-sm-2">
-                    <!-- 1 -->
+                    <!-- 1 check-box -->
                     <p class="mb-2 fw-bold p-2">تطويرات متوفرة لهذه الاخدمة</p>
                     <div class="custom-control custom-checkbox text-gray">
                       <input
@@ -65,7 +65,7 @@
                       >
                       <span class="float-start text-purple">$5</span>
                     </div>
-                    <!-- 2 -->
+                    <!-- 2 check-box -->
                     <div
                       class="custom-control mt-lg-3 mt-sm-2 custom-checkbox text-gray"
                     >
@@ -222,7 +222,7 @@
           </div>
           <!-- end section -->
         </div>
-        <div class="col-md-4 bg-light pt-lg-3 mb-lg-3">
+        <div class="col-md-12 col-lg-4 bg-light pt-lg-3 mb-lg-3">
           <!-- مزود الخدمة -->
           <div class="row">
             <div
@@ -320,7 +320,11 @@
                 <div class="card-body mb-n3">
                   <div class="row mb-2 fw-bold text-purple">خدمات ممثالة</div>
                   <!-- خدمة ممثالة -->
-                  <div class="row mt-2" v-for="work in works" :key="work.id">
+                  <div
+                    class="row mt-2 mt-lg-3"
+                    v-for="work in works"
+                    :key="work.id"
+                  >
                     <div class="col-md-5">
                       <img
                         src="@/assets/images/learning.jpg"

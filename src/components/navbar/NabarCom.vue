@@ -39,15 +39,18 @@
               >
             </li>
           </ul>
-          <button
-            type="button"
-            class="btn bg-white text-purple ms-2 ms-lg-3 fw-bold"
+          <router-link
+            class="btn bg-white text-purple ms-2 fs-14 fw-bold cairo"
+            :to="{ name: 'login' }"
           >
-            دخول
-          </button>
-          <button type="button" class="btn bg-white mx-2 text-purple fw-bold">
-            المتجر
-          </button>
+            تسجيل دخول
+          </router-link>
+          <router-link
+            class="btn bg-white text-purple ms-2 fs-14 fw-bold cairo"
+            :to="{ name: 'register' }"
+          >
+            انشاء حساب
+          </router-link>
         </div>
       </div>
     </nav>

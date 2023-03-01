@@ -12,12 +12,17 @@
           فترة 24 ساعة.
         </p>
       </header>
-      <button type="button" class="btn cairo text-white d-block m-2">
-        تسجيل كمقدم خدمة
-      </button>
-      <button type="button" class="btn cairo text-white d-block m-2">
-        تسجيل كمستفيد
-      </button>
+
+      <router-link class="text-white" :to="{ name: 'register' }">
+        <button type="button" class="btn cairo text-white d-block m-2">
+          تسجيل كمقدم خدمة
+        </button>
+      </router-link>
+      <router-link class="text-white" :to="{ name: 'register' }">
+        <button type="button" class="btn cairo text-white d-block m-2">
+          تسجيل كمستفيد
+        </button>
+      </router-link>
     </div>
   </div>
   <div class="container-fluid mt-lg-5 mt-sm-2">
@@ -35,15 +40,16 @@
               <div class="card-body">
                 <div class="pt-3 pb-3">
                   <span>
-                    <img src="@/assets/images/24-hours.gif" width="60" alt="" />
+                    <img :src="service.img" width="60" alt="" />
                   </span>
                   <span>
-                    <span class="card-title h5 fw-bold">استعراض الخدمة</span>
+                    <span class="card-title h5 fw-bold">{{
+                      service.title
+                    }}</span>
                   </span>
                 </div>
                 <p class="card-text small fw-bold">
-                  ابحث عن الخدمة التي تحتاجها باستخدام مربع البحث في الأعلى او
-                  عبر التصنيفات
+                  {{ service.desc }}
                 </p>
               </div>
             </div>
@@ -306,16 +312,19 @@ export default {
       services: [
         {
           id: "1",
+          img: require("@/assets/images/24-hours.gif"),
           title: "استعراض الخدمة",
           desc: "ابحث عن الخدمة التي تحتاجها باستخدام مربع البحث في الأعلى او عبر التصنيفات",
         },
         {
           id: "2",
+          img: require("@/assets/images/service.gif"),
           title: "اطلب الخدمة",
           desc: "راجع وصف الخدمة وتقييمات المشتريين ثم اطلبها لفتح تواصل مع البائع",
         },
         {
           id: "3",
+          img: require("@/assets/images/shipping.gif"),
           title: "استلم خدمتك",
           desc: "تواصل مع البائع مباشرة داخل الموقع حتى استلام طلبك كاملا",
         },

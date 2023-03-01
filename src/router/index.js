@@ -9,6 +9,8 @@ import VideoView from "../views/designVideo/VideoView.vue";
 import DesignView from "../views/design/DesignView.vue";
 import CreativityView from "../views/creative/CreativityView.vue";
 import VoiceservView from "../views/voice/VoiceservView";
+import RegistrationView from "../views/auth/RegistrationView";
+import LoginView from "../views/auth/LoginView.vue";
 
 const routes = [
   {
@@ -69,6 +71,16 @@ const routes = [
     path: "/voice",
     name: "voice",
     component: VoiceservView,
+  },
+  {
+    path: "/register",
+    name: "register",
+    component: RegistrationView,
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: LoginView,
   },
 ];
 

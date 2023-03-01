@@ -12,12 +12,16 @@
           فترة 24 ساعة.
         </p>
       </header>
-      <button type="button" class="btn text-white d-block m-2">
-        تسجيل كمقدم خدمة
-      </button>
-      <button type="button" class="btn text-white d-block m-2">
-        تسجيل كمستفيد
-      </button>
+      <router-link class="text-white" :to="{ name: 'register' }">
+        <button type="button" class="btn cairo text-white d-block m-2">
+          تسجيل كمقدم خدمة
+        </button>
+      </router-link>
+      <router-link class="text-white" :to="{ name: 'register' }">
+        <button type="button" class="btn cairo text-white d-block m-2">
+          تسجيل كمستفيد
+        </button>
+      </router-link>
     </div>
   </div>
   <div class="container-fluid mt-lg-5 mt-sm-2">
@@ -189,30 +193,33 @@
                 v-for="program in Programming"
                 :key="program"
               >
-                <div class="card border-0 cards" style="width: 100%">
-                  <img
-                    src="@/assets/images/testimg.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <p
-                      class="card-text cairo fw-bold mb-3"
-                      style="font-size: 12px"
-                    >
-                      مقترح للعمل على اعداد الخطط الاستراتيجيه للمتاجر والشركات.
-                    </p>
-                    <h5
-                      class="card-title cairo text-secondary"
-                      style="font-size: 16px"
-                    >
-                      أعمال/استشارات اعمال
-                    </h5>
-                    <span class="text-secondary"
-                      >تبدأ من <span class="text-dark fw-bold">$5.00</span>
-                    </span>
+                <router-link :to="{ name: 'subbussines' }">
+                  <div class="card border-0 cards" style="width: 100%">
+                    <img
+                      src="@/assets/images/testimg.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <p
+                        class="card-text cairo fw-bold mb-3"
+                        style="font-size: 12px"
+                      >
+                        مقترح للعمل على اعداد الخطط الاستراتيجيه للمتاجر
+                        والشركات.
+                      </p>
+                      <h5
+                        class="card-title cairo text-secondary"
+                        style="font-size: 16px"
+                      >
+                        أعمال/استشارات اعمال
+                      </h5>
+                      <span class="text-secondary"
+                        >تبدأ من <span class="text-dark fw-bold">$5.00</span>
+                      </span>
+                    </div>
                   </div>
-                </div>
+                </router-link>
                 <!-- .card -->
               </div>
             </div>

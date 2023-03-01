@@ -1,18 +1,18 @@
 <template>
   <div class="about">about</div>
-  <div class="star-rating">
-    <span>&star;</span>
-    <span>&star;</span>
-    <span>&star;</span>
-    <span>&star;</span>
-    <span>&star;</span>
-    <div class="star-rating__current">
+  <div class="star-rating star">
+    <span
+      ><a v-for="ratings in 5" :key="ratings" href="#" :rating="rating">
+        &starf;</a
+      ></span
+    >
+    <!-- <div class="star-rating__current">
       <span>&starf;</span>
       <span>&starf;</span>
       <span>&starf;</span>
       <span>&starf;</span>
       <span>&starf;</span>
-    </div>
+    </div> -->
   </div>
   <input type="text" v-model="search" />
   <div v-for="categorie in filtercategories" :key="categorie.id">
@@ -29,6 +29,7 @@ export default {
         { id: 1, title: "post-1", body: "vue.js is cool" },
         { id: 2, title: "post-2", body: "Javascript.js is cool" },
       ],
+      rating: "",
     };
   },
   computed: {
@@ -38,17 +39,43 @@ export default {
       );
     },
   },
+  mounted() {
+    this.stars();
+  },
+  methods: {
+    stars() {
+      var stars = document.querySelectorAll(".star a");
+      stars.forEach((item, index1) => {
+        item.addEventListener("click", () => {
+          stars.forEach((star, index2) => {
+            index1 >= index2
+              ? star.classList.add("active")
+              : star.classList.remove("active");
+          });
+          console.log(index1 + 1);
+          this.rating = index1 + 1;
+        });
+      });
+    },
+  },
 };
 </script>
 <style scoped>
 .star-rating {
   display: inline;
   color: gold;
-  font-size: 4rem;
+  font-size: 2rem;
   position: relative;
 }
-.star-rating__current {
+/* .star-rating__current {
   position: absolute;
   top: -13px;
+} */
+.star-rating a {
+  color: aliceblue;
+  transition: all 0.3 ease-in-out;
+}
+.star-rating a.active {
+  color: gold;
 }
 </style>
