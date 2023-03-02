@@ -11,7 +11,12 @@ import CreativityView from "../views/creative/CreativityView.vue";
 import VoiceservView from "../views/voice/VoiceservView";
 import RegistrationView from "../views/auth/RegistrationView";
 import LoginView from "../views/auth/LoginView.vue";
-
+/* userdashboard */
+import UserhomeView from "../views/userDashboard/home/UserhomeView.vue";
+import UserordersView from "../views/userDashboard/orders/UserordersView.vue";
+import UsermessageView from "../views/userDashboard/message/UsermessageView.vue";
+import UserreviewView from "../views/userDashboard/reviews/UserreviewView.vue";
+import UseraccountView from "../views/userDashboard/account/UseraccountView.vue";
 const routes = [
   {
     path: "/",
@@ -81,6 +86,32 @@ const routes = [
     path: "/login",
     name: "login",
     component: LoginView,
+  },
+  /* user dashboard */
+  {
+    path: "/dashboard",
+    name: "dashboard",
+    component: UserhomeView,
+  },
+  {
+    path: "/orders",
+    name: "orders",
+    component: UserordersView,
+  },
+  {
+    path: "/message",
+    name: "message",
+    component: UsermessageView,
+  },
+  {
+    path: "/reviews",
+    name: "reviews",
+    component: UserreviewView,
+  },
+  {
+    path: "/account",
+    name: "account",
+    component: UseraccountView,
   },
 ];
 

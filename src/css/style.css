@@ -14,6 +14,10 @@
     color: #433472 !important;
 }
 
+.bg-purple {
+    background-color: #433472 !important;
+}
+
 .text-gray {
     color: #7E7D7D !important;
 }
@@ -148,5 +152,12 @@ a {
     .cards img {
         height: 190px;
         object-fit: contain;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .navbarsmalldvice {
+        display: none !important;
     }
 }

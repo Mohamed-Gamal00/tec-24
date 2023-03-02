@@ -307,12 +307,6 @@ template {
 [hidden] {
   display: none !important; }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 1.2;
-  color: #001a4e; }
 
 h1, .h1 {
   font-size: 2.1875rem; }
@@ -9286,10 +9280,6 @@ select {
   position: fixed;
   left: 5rem;
   height: 100%; }
-
-.h1, .h2, .h3, .h4, .h5, .h6,
-h1, h2, h3, h4, h5, h6, strong {
-  color: #001a4e; }
 
 .text-muted {
   color: #adb5bd !important; }
