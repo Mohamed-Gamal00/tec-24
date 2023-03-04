@@ -32,6 +32,7 @@ a {
     text-decoration: none !important;
 }
 
+/* fonts */
 .fw-bold900 {
     font-weight: 900 !important;
 }
@@ -123,11 +124,11 @@ a {
     background-color: #205c390a;
 }
 
+/* forms */
 .form-control:focus {
     color: #000000 !important;
     background-color: #ffffff !important;
     border: 1px solid #433472 !important;
-    /* border-color: #433472 !important; */
     outline: 0;
     box-shadow: 0 0 0 0.25rem #43347200 !important;
 }
@@ -135,14 +136,20 @@ a {
 /* inpu form */
 .form-control {
     border-radius: 0 !important;
-    /* border-top-right-radius: 0;
-    border-bottom-left-radius: 0;*/
     border: 1px solid #c9c9c9 !important;
     border-bottom-left-radius: 7px !important;
     border-top-left-radius: 7px !important;
     border-right: 1px solid rgba(107, 107, 107, 0.788) !important;
 }
 
+/* cards */
+.card-body {
+    padding-top: 5px !important;
+}
+.col-md-4 .list-group {
+    padding: 10px 0 !important;
+    /* margin: 1px 0 !important; */
+}
 /* media query */
 @media only screen and (min-width: 992px) {
     .cards {
@@ -151,7 +158,7 @@ a {
 
     .cards img {
         height: 190px;
-        object-fit: contain;
+        object-fit: cover;
     }
 }
 

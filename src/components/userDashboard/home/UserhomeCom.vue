@@ -3,32 +3,8 @@
     <div class="wrapper">
       <main role="main" class="main-content p-0">
         <div class="container-fluid">
-          <div class="row bg-purple py-2">
-            <!-- لوحة التحكم -->
-            <div class="col-md-6 align-self-center">
-              <router-link class="text-white" :to="{ name: 'dashboard' }">
-                <i class="fe fe-home fe-16"></i>
-                <span class="ml-2 item-text">لوحة التحكم</span>
-                <span> > الرئيسية </span>
-              </router-link>
-            </div>
-            <div class="col-md-6 d-inline text-start">
-              <span class="ps-3">
-                <img
-                  src="@/assets/images/bg-image.png"
-                  alt="img"
-                  width="40"
-                  height="40"
-                  class="avatar-img rounded-circle"
-                  style="object-fit: cover"
-                />
-              </span>
-              <span>
-                <strong class="mb-1 text-white">mohamed gamal</strong>
-                <!-- <span class="dot dot-lg bg-success ml-1"></span> -->
-              </span>
-            </div>
-          </div>
+          <!-- dash -->
+          <HeaderCom />
           <div class="row justify-content-center">
             <div class="col-12">
               <!-- <h2>Section title</h2> -->
@@ -148,7 +124,9 @@
 </template>
 
 <script>
+import HeaderCom from "../nav/HeaderCom.vue";
 export default {
+  components: { HeaderCom },
   name: "UserhomeCom",
 };
 </script>

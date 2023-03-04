@@ -166,7 +166,7 @@
                       id="customCheck1"
                     />
                     <label
-                      class="form-check-label d-inline small"
+                      class="form-check-label d-inline small me-2"
                       for="flexCheckDefault"
                       >عندما تقوم بانشاء حساب فهذا يعني انك تقوم بالموافقة على
                       جميع الحقوق والخدمات والامن واعدادات الاشعارات</label
@@ -181,7 +181,7 @@
                       <div class="text-center mt-lg-2">
                         <span class="fs-10 fw-bold">بالفعل تمتلك حساب؟</span>
                         <router-link
-                          class="btn bg-white text-purple fs-14 fw-bold cairo"
+                          class="bg-white text-purple fs-10 fw-bold cairo"
                           :to="{ name: 'login' }"
                         >
                           تسجيل دخول
@@ -242,7 +242,7 @@ input::-webkit-inner-spin-button {
 .input-group-text {
   display: flex;
   align-items: center;
-  padding: 0.71rem 0.75rem;
+  padding: 0rem 0.75rem !important;
   font-size: 2rem;
   font-weight: 400;
   line-height: 1.5;

@@ -1,5 +1,5 @@
 <template>
-  <div class="register">
+  <div class="login">
     <div class="container-fluid w-auto vh-100 bg-light">
       <div class="row vh-100">
         <!-- col-8 img -->
@@ -83,7 +83,7 @@
                             تسجيل دخول
                           </button>
                           <router-link
-                            class="btn bg-white text-purple mt-2 fs-14 fw-bold cairo"
+                            class="btn bg-white border-0 text-purple mt-2 mt-lg-3 fs-14 fw-bold cairo"
                             :to="{ name: 'register' }"
                           >
                             إنشاء حساب
@@ -109,8 +109,9 @@ export default {
 </script>
 
 <style scoped>
-.register {
+.login {
   direction: rtl;
+  overflow: hidden;
 }
 /*col-5 bg-img text */
 .containerr {
@@ -145,7 +146,7 @@ input::-webkit-inner-spin-button {
 .input-group-text {
   display: flex;
   align-items: center;
-  padding: 0.71rem 0.75rem;
+  padding: 0rem 0.75rem;
   font-size: 2rem;
   font-weight: 400;
   line-height: 1.5;

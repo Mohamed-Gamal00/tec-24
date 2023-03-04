@@ -45,7 +45,7 @@
               v-model="search"
             />
             <!-- title -->
-            <div class="row categories">
+            <div class="row categories mb-3">
               <strong>الاقسام</strong>
               <router-link :to="{ name: 'Bussines' }">
                 <span>اعمال</span>
@@ -82,7 +82,7 @@
               <div class="list-group list-group-flush my-n3">
                 <div class="list-group-item">
                   <div
-                    class="row align-items-center mt-2 text-gray"
+                    class="row align-items-center mt-2 mb-2 text-gray"
                     v-for="categorie in filtercategories"
                     :key="categorie.id"
                   >
@@ -99,7 +99,7 @@
               <!-- / .list-group -->
             </div>
             <!-- مستوي البائع -->
-            <div class="card-body mt-lg-3">
+            <div class="card-body mt-lg-0">
               <div class="list-group list-group-flush my-n3">
                 <div class="list-group-item">
                   <div class="row">
@@ -148,7 +148,7 @@
               </div>
             </div>
             <!-- مستوي البائع -->
-            <div class="card-body mt-lg-3">
+            <div class="card-body mt-lg-0">
               <div class="list-group list-group-flush my-n3">
                 <div class="list-group-item">
                   <div class="row">
@@ -390,19 +390,6 @@ h1 {
 /* cards */
 .cards {
   margin: 0 auto;
-  /* text-align: center; */
-  /* display: -webkit-flex;
-    display: flex;
-    border-radius: 10px;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-top: 15px;
-    padding: 1.5%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; */
   border: 1px solid #d3d3d349 !important;
   box-shadow: 0 3px 6px rgba(180, 180, 180, 0.082),
     0 3px 6px rgba(116, 116, 116, 0.123);
