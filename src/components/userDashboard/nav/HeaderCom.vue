@@ -2,7 +2,7 @@
   <div>
     <div class="row bg-purple py-2">
       <!-- لوحة التحكم -->
-      <div class="col-md-6 align-self-center">
+      <div class="col-6 align-self-center">
         <router-link
           v-if="$route.name == 'dashboard'"
           class="text-white"
@@ -10,7 +10,10 @@
         >
           <i class="fe fe-home fe-16"></i>
           <span class="ml-2 item-text">لوحة التحكم</span>
-          <span> > الرئيسية </span>
+          <span>
+            <FontAwesome icon="angles-left" class="fe-16 ms-lg-2 me-lg-2" />
+            الرئيسية
+          </span>
         </router-link>
         <router-link
           v-if="$route.name == 'orders'"
@@ -19,11 +22,14 @@
         >
           <i class="fe fe-home fe-16"></i>
           <span class="ml-2 item-text">طلباتي</span>
-          <span> > طلباتي </span>
+          <span>
+            <FontAwesome icon="angles-left" class="fe-16 ms-lg-2 me-lg-2" />
+            طلباتي
+          </span>
         </router-link>
       </div>
-      <div class="col-md-6 d-inline text-start">
-        <span class="ps-3">
+      <div class="col-6 d-inline text-start">
+        <span class="ps-2">
           <img
             src="@/assets/images/bg-image.png"
             alt="img"

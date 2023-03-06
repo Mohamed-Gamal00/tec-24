@@ -2,17 +2,17 @@
   <div>
     <NavbarCom />
     <SidebarCom />
-    <UserhomeCom />
+    <UserDashboardComVue />
   </div>
 </template>
 
 <script>
 import SidebarCom from "@/components/userDashboard/nav/SidebarCom.vue";
-import UserhomeCom from "@/components/userDashboard/home/UserhomeCom.vue";
+import UserDashboardComVue from "@/components/userDashboard/home/UserDashboardCom.vue";
 import NavbarCom from "@/components/userDashboard/nav/NavbarCom.vue";
 export default {
   name: "UserhomeView",
-  components: { SidebarCom, UserhomeCom, NavbarCom },
+  components: { SidebarCom, UserDashboardComVue, NavbarCom },
 };
 </script>
 
