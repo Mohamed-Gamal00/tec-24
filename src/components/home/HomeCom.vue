@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="container-fluid mt-lg-5 mt-sm-2">
-    <p class="text-center fw-bold fs-3">كيف يعمل الموقع</p>
+    <p class="text-center fw-bold fs-3 mt-3">كيف يعمل الموقع</p>
     <!-- كيف يعما الموقع -->
     <div class="row justify-content-center cairo">
       <div class="col-md-10">
