@@ -80,7 +80,7 @@
                                 <td style="width: 15%">
                                   <div>
                                     <img
-                                      src="@/assets/images/testimg.jpg"
+                                      src="@/assets/images/testimg.webp"
                                       alt=""
                                       class="rounded"
                                       width="60"
@@ -136,7 +136,7 @@
                                     <!-- <div class="col-3 col-md-2"> -->
                                     <div class="col-3">
                                       <img
-                                        src="@/assets/images/learning.jpg"
+                                        src="@/assets/images/learning.webp"
                                         alt="..."
                                         class="rounded"
                                         width="50"

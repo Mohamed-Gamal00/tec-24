@@ -144,4 +144,25 @@ table > tbody td img {
 .bg-gold {
   color: gold;
 }
+/* scroll */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #433472;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #433472;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6c10e6;
+}
 </style>

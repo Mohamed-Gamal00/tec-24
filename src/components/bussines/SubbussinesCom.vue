@@ -183,7 +183,7 @@
                     <div class="col-md-10">
                       <span class="ps-3">
                         <img
-                          src="@/assets/images/bg-image.png"
+                          src="@/assets/images/bg-image.webp"
                           alt="img"
                           width="60"
                           height="60"
@@ -239,7 +239,7 @@
                       <p class="small fw-bold text-purple">مزود الخدمة</p>
                       <span class="ps-3">
                         <img
-                          src="@/assets/images/bg-image.png"
+                          src="@/assets/images/bg-image.webp"
                           alt="img"
                           width="60"
                           height="60"
@@ -327,7 +327,7 @@
                   >
                     <div class="col-md-5">
                       <img
-                        src="@/assets/images/learning.jpg"
+                        src="@/assets/images/learning.webp"
                         class="img-thumbnail"
                         alt="img"
                       />

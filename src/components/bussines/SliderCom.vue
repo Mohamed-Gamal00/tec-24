@@ -30,9 +30,9 @@ export default {
   data() {
     return {
       images: [
-        { id: 1, img: require("@/assets/images/testimg.jpg") },
-        { id: 2, img: require("@/assets/images/marketing.jpg") },
-        { id: 3, img: require("@/assets/images/bg-image.png") },
+        { id: 1, img: require("@/assets/images/testimg.webp") },
+        { id: 2, img: require("@/assets/images/marketing.webp") },
+        { id: 3, img: require("@/assets/images/bg-image.webp") },
       ],
     };
   },

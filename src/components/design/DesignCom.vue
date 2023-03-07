@@ -197,7 +197,7 @@
               >
                 <div class="card border-0 cards" style="width: 100%">
                   <img
-                    src="@/assets/images/design.png"
+                    src="@/assets/images/design.webp"
                     class="card-img-top"
                     alt="img"
                   />
@@ -361,7 +361,7 @@ export default {
   overflow: hidden;
 }
 .bacgroundimage {
-  background-image: url("@/assets/images/bg-image.png");
+  background-image: url("@/assets/images/bg-image.webp");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */

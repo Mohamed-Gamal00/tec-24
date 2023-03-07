@@ -196,7 +196,7 @@
                 <router-link :to="{ name: 'subbussines' }">
                   <div class="card border-0 cards" style="width: 100%">
                     <img
-                      src="@/assets/images/testimg.jpg"
+                      src="@/assets/images/testimg.webp"
                       class="card-img-top"
                       alt="..."
                     />
@@ -362,7 +362,7 @@ export default {
   overflow: hidden;
 }
 .bacgroundimage {
-  background-image: url("@/assets/images/bg-image.png");
+  background-image: url("@/assets/images/bg-image.webp");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */

@@ -6,7 +6,7 @@
         <div class="col-lg-5 containerr bg-black m-0 p-0">
           <div class="containerr">
             <img
-              src="@/assets/images/bg-image.png "
+              src="@/assets/images/bg-image.webp "
               class="vh-100"
               alt="Nature"
               style="width: 100%"

@@ -39,11 +39,23 @@
             مراجعاتي
           </span>
         </router-link>
+        <router-link
+          v-if="$route.name == 'account'"
+          class="text-white"
+          :to="{ name: 'reviews' }"
+        >
+          <i class="fe fe-user fe-16"></i>
+          <span class="ml-2 item-text">حسابي</span>
+          <span>
+            <FontAwesome icon="angles-left" class="fe-16 ms-lg-2 me-lg-2" />
+            حسابي
+          </span>
+        </router-link>
       </div>
       <div class="col-6 d-inline text-start">
         <span class="ps-2">
           <img
-            src="@/assets/images/bg-image.png"
+            src="@/assets/images/bg-image.webp"
             alt="img"
             width="40"
             height="40"

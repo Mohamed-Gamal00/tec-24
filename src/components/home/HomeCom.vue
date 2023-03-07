@@ -74,7 +74,7 @@
           >
             <div class="card border-0 cardImg" style="width: 100%">
               <img
-                src="@/assets/images/testimg.jpg"
+                src="@/assets/images/testimg.webp"
                 class="card-img-top"
                 alt="..."
               />
@@ -132,7 +132,7 @@
           >
             <div class="card border-0 cardImg" style="width: 100%">
               <img
-                src="@/assets/images/marketing.jpg"
+                src="@/assets/images/marketing.webp"
                 class="card-img-top"
                 alt="..."
               />
@@ -160,7 +160,7 @@
           >
             <div class="card border-0 cardImg" style="width: 100%">
               <img
-                src="@/assets/images/learning.jpg"
+                src="@/assets/images/learning.webp"
                 class="card-img-top"
                 alt="..."
               />
@@ -190,7 +190,7 @@
           >
             <div class="card border-0 cardImg" style="width: 100%">
               <img
-                src="@/assets/images/creative.svg"
+                src="@/assets/images/creative.webp"
                 class="card-img-top"
                 alt="..."
               />
@@ -242,7 +242,7 @@
           >
             <div class="card border-0 cardImg" style="width: 100%">
               <img
-                src="@/assets/images/design.png"
+                src="@/assets/images/design.webp"
                 class="card-img-top"
                 alt="..."
               />
@@ -268,7 +268,7 @@
           >
             <div class="card border-0 cardImg" style="width: 100%">
               <img
-                src="@/assets/images/voice.png"
+                src="@/assets/images/voice.webp"
                 class="card-img-top"
                 alt="..."
               />
@@ -392,7 +392,7 @@ export default {
   overflow: hidden;
 }
 .bacgroundimage {
-  background-image: url("@/assets/images/bg-image.png");
+  background-image: url("@/assets/images/bg-image.webp");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
