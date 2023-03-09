@@ -21,12 +21,12 @@
                         <div class="col-md-3 col-lg-4 text-end text-lg-end">
                           <a href="#!" class="avatar avatar-xl">
                             <img
-                              src="@/assets/images/personal.webp"
+                              src="@/assets/images/hassan.jpg"
                               alt="..."
                               class="avatar-img rounded-circle"
                             />
                           </a>
-                          <div class="d-inline-block">
+                          <div class="d-inline-block me-lg-2">
                             <span class="text-purple cairo fw-bolder"
                               >mohamed gamal</span
                             >
@@ -273,7 +273,7 @@
                               <div class="col-md-4 justify-content-start">
                                 <div class="text-center mt-lg-2">
                                   <button
-                                    class="btn text-purple fs-10"
+                                    class="btn text-white fs-10"
                                     :to="{ name: 'login' }"
                                   >
                                     الغاء التعديلات
@@ -307,7 +307,7 @@
                         <div class="col-md-12 col-lg-12 text-center">
                           <a href="#!" class="avatar avatar-lg">
                             <img
-                              src="@/assets/images/personal.webp"
+                              src="@/assets/images/hassan.jpg"
                               alt="..."
                               class="avatar-img rounded-circle"
                             />
@@ -356,8 +356,11 @@
                             class="fe-16 ms-lg-2 me-lg-2 float-start text-purple mt-1 icon"
                           />
                         </div>
-                        <div class="card-body pt-3 ps-0 pe-0 show">
-                          <div class="row">
+                        <div
+                          class="card-body pt-3 ps-0 pe-0 show"
+                          style="background-color: #4334720a"
+                        >
+                          <div class="row justify-content-center">
                             <div class="col-md-5 col-lg-12">
                               <div
                                 class="list-group mb-3 pl-0 list-group-flush my-n3"
@@ -366,7 +369,7 @@
                               >
                                 <div
                                   class="list-group-item"
-                                  style="background-color: #4334720a"
+                                  style="background-color: transparent"
                                 >
                                   <div class="row align-items-center">
                                     <!-- <div class="col-3 col-md-2"> -->

@@ -17,6 +17,8 @@ import UserordersView from "../views/userDashboard/orders/UserordersView.vue";
 import UsermessageView from "../views/userDashboard/message/UsermessageView.vue";
 import UserreviewView from "../views/userDashboard/reviews/UserreviewView.vue";
 import UseraccountView from "../views/userDashboard/account/UseraccountView.vue";
+/* admin */
+import DashboardView from "../views/admin/DashboardView.vue";
 const routes = [
   {
     path: "/",
@@ -112,6 +114,12 @@ const routes = [
     path: "/account",
     name: "account",
     component: UseraccountView,
+  },
+  /* dashboard */
+  {
+    path: "/admin",
+    name: "admin",
+    component: DashboardView,
   },
 ];
 
