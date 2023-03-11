@@ -1,21 +1,19 @@
 <template>
   <div>
     <div class="wrapper">
-      <main role="main" class="main-content">
+      <main role="main" class="main-content p-0">
         <div class="container-fluid">
-          <div class="col-md-12">
+          <div class="col-md-12 p-0">
             <div class="card border">
               <div class="card-header border-0 bg-purple">
-                <strong class="card-title mb-0 text-white"
-                  >المستخمين الجدد</strong
-                >
-                <p class="small m-0 p-0 text-white">احدث المستخدمين</p>
+                <strong class="card-title mb-0 text-white">المستخدمون </strong>
+                <strong class="float-right m-0 p-0 text-white">اضافة</strong>
               </div>
               <div class="card-body pt-3 pb-3 ps-0 pe-0">
                 <div class="list-group list-group-flush my-n3 p-0">
                   <div class="list-group-item">
                     <div class="row card-body my-1 pb-1">
-                      <table class="table">
+                      <table class="table table-borderless tbody">
                         <thead>
                           <tr>
                             <th scope="col">المستخدم</th>
@@ -27,13 +25,37 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr v-for="user in 10" :key="user.id">
-                            <td style="width: 200px">mohamed gamal</td>
-                            <td>مشتري</td>
-                            <td>$500</td>
-                            <td>منذ ساعة</td>
-                            <td>نشط</td>
-                            <td>حذف | تعديل</td>
+                          <tr v-for="user in 15" :key="user.id">
+                            <td>
+                              <div class="fw-bold fs-10">
+                                <span class="m-3">mohamed gamal</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="fw-bold fs-10">
+                                <span class="m-3 text-success">مشتري</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="fw-bold fs-10">
+                                <span class="m-3 text-danger">$300</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="fw-bold fs-10">
+                                <span class="m-3">منذ ساعة</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="fw-bold fs-10">
+                                <span class="m-3 text-success">نشط</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="fw-bold fs-10">
+                                <span class="m-3">حذف | تعديل</span>
+                              </div>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -59,9 +81,25 @@ export default {
 </script>
 
 <style scoped>
-@media only screen and (min-width: 600px) {
-  table tr td {
-    width: 200px;
+.border {
+  border: 1px solid #43347265 !important;
+}
+.table thead th,
+td {
+  color: #322a7d;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .button_number {
+    margin-bottom: 21px;
+    fs-10-size: 10px;
+    width: 120px;
+  }
+  .button_number .fs-10Awesome {
+    fs-10-size: 10px;
+  }
+  .fs-10 {
+    width: 164px;
   }
 }
 </style>
