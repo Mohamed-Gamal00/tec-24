@@ -4,7 +4,7 @@
       <main role="main" class="main-content p-0">
         <div class="container-fluid">
           <div class="col-md-12 p-0">
-            <div class="card border">
+            <div class="card border-0">
               <div class="card-header border-0 bg-purple">
                 <strong class="card-title mb-0 text-white">المستخدمون </strong>
                 <strong class="float-right m-0 p-0 text-white">اضافة</strong>
@@ -13,7 +13,7 @@
                 <div class="list-group list-group-flush my-n3 p-0">
                   <div class="list-group-item">
                     <div class="row card-body my-1 pb-1">
-                      <table class="table table-borderless tbody">
+                      <table class="table table-borderless tbody table-striped">
                         <thead>
                           <tr>
                             <th scope="col">المستخدم</th>
@@ -81,9 +81,6 @@ export default {
 </script>
 
 <style scoped>
-.border {
-  border: 1px solid #43347265 !important;
-}
 .table thead th,
 td {
   color: #322a7d;

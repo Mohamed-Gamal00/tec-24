@@ -69,14 +69,14 @@
                   <div class="list-group list-group-flush p-0">
                     <div class="list-group-item">
                       <div class="row align-items-center">
-                        <GoogleMap
-                          api-key="AIzaSyC2oROB210Cd8vgUz5o93HMhyKCxFlwQbA"
+                        <!-- <GoogleMap
+                          api-key=""
                           style="width: 100%; height: 300px; padding: 0"
                           :center="center"
                           :zoom="15"
                         >
                           <Marker :options="{ position: center }" />
-                        </GoogleMap>
+                        </GoogleMap> -->
                       </div>
                     </div>
                   </div>
@@ -91,16 +91,16 @@
 </template>
 
 <script>
-import { GoogleMap, Marker } from "vue3-google-map";
+// import { GoogleMap, Marker } from "vue3-google-map";
 
 export default {
   name: "DashboardCom",
-  components: { GoogleMap, Marker },
-  setup() {
-    const center = { lat: 40.689247, lng: -74.044502 };
+  // components: { GoogleMap, Marker },
+  // setup() {
+  //   const center = { lat: 40.689247, lng: -74.044502 };
 
-    return { center };
-  },
+  //   return { center };
+  // },
   data() {
     return {
       cards: [

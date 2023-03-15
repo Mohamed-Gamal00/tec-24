@@ -15,10 +15,11 @@
                   <thead>
                     <tr>
                       <th>ID</th>
+                      <th>الصورة</th>
                       <th>الخدمة</th>
                       <th>التعليق</th>
-                      <th class="text-lg-center">تقييم</th>
                       <th>المدة</th>
+                      <th>تقييم</th>
                       <th>الحالة</th>
                     </tr>
                   </thead>
@@ -26,44 +27,49 @@
                     <tr v-for="order in 10" :key="order.id">
                       <!-- id -->
                       <td style="width: 7%">3224</td>
-                      <!-- الخدمة -->
-                      <td style="width: 30%">
-                        <div class="row">
-                          <div class="col-4 ps-0 text-center">
+                      <!-- الصورة -->
+                      <td style="width: 10%">
+                        <div>
+                          <span class="">
                             <img
                               src="@/assets/images/webtest.webp"
-                              alt=""
+                              alt="img"
                               class="rounded"
                               width="50"
                               height="50"
                             />
-                          </div>
-                          <div class="col-8 pe-0">
-                            <p class="my-0 text-purple small fw-bold cairo">
-                              تصميم صفحة ويب
-                            </p>
-                            <p class="my-0">$155</p>
-                          </div>
+                          </span>
+                        </div>
+                      </td>
+                      <!-- الخدمة -->
+                      <td style="width: 20%" class="ps-0 pe-0">
+                        <div class="m-0" style="width: 140px">
+                          <strong class="text-purple small cairo fw-bold">
+                            تصميم صفحة ويب
+                          </strong>
+                          <p class="fs-10 text-muted">$155</p>
                         </div>
                       </td>
                       <!-- التعليق -->
                       <td style="width: 20%">
-                        <strong
-                          class="text-purple fs-10 text-muted cairo fw-bold"
-                        >
-                          احسنت في العمل ، الموقع رائع جدأ!
-                        </strong>
-                      </td>
-                      <!-- التقييم -->
-                      <td style="width: 20%" class="text-lg-center">
-                        <span class="bg-gold">&starf;</span>
-                        <span class="bg-gold">&starf;</span>
-                        <span class="bg-gold">&starf;</span>
-                        <span class="bg-gold">&starf;</span>
-                        <span class="bg-gold">&starf;</span>
+                        <div class="m-0" style="width: 185px">
+                          <strong
+                            class="text-purple fs-10 text-muted cairo fw-bold"
+                          >
+                            احسنت في العمل ، الموقع رائع جدأ!
+                          </strong>
+                        </div>
                       </td>
                       <!-- المدة -->
                       <td style="width: 20%">13 ساعة</td>
+                      <!-- التقييم -->
+                      <td style="width: 20%">
+                        <span class="bg-gold">&starf;</span>
+                        <span class="bg-gold">&starf;</span>
+                        <span class="bg-gold">&starf;</span>
+                        <span class="bg-gold">&starf;</span>
+                        <span class="bg-gold">&starf;</span>
+                      </td>
                       <!-- الحالة -->
                       <td>
                         <div class="dropdown badge badge-pill">
@@ -119,7 +125,7 @@ export default {
   padding: 10px;
 }
 table > tbody td {
-  padding: 20px 0;
+  padding: 10px 10px;
 }
 table > thead tr {
   border-bottom: 1px solid rgba(189, 187, 187, 0.37);
@@ -131,9 +137,6 @@ table > tbody td img {
 }
 
 @media only screen and (max-width: 600px) {
-  table > tbody td div p {
-    display: none;
-  }
   img {
     object-fit: cover;
     max-width: 50px !important;

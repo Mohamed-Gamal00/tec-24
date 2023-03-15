@@ -65,50 +65,82 @@
                             <thead>
                               <tr>
                                 <th>ID</th>
+                                <th>الصورة</th>
                                 <th>الخدمة</th>
-                                <th>الاسم</th>
                                 <th>السعر</th>
                                 <th>المدة</th>
                                 <th>الحالة</th>
                               </tr>
                             </thead>
                             <tbody>
-                              <tr v-for="order in 4" :key="order.id">
+                              <tr v-for="order in orders" :key="order.id">
                                 <!-- id -->
                                 <td style="width: 15%">3224</td>
-                                <!-- الخدمة -->
-                                <td style="width: 15%">
+                                <!-- الصورة -->
+                                <td style="width: 10%">
                                   <div>
-                                    <img
-                                      src="@/assets/images/testimg.webp"
-                                      alt=""
-                                      class="rounded"
-                                      width="60"
-                                      height="60"
-                                    />
+                                    <span class="">
+                                      <img
+                                        src="@/assets/images/webtest.webp"
+                                        alt="img"
+                                        class="rounded"
+                                        width="60"
+                                        height="60"
+                                      />
+                                    </span>
                                   </div>
-                                  <!-- <span>
-                                    <h6 class="text-purple">تصميم صفحة ويب</h6>
-                                    <p class="small">هو ببساطة نص شكلي</p>
-                                  </span> -->
                                 </td>
-                                <!-- الاسم -->
-                                <td>
-                                  <strong
-                                    class="text-purple small cairo fw-bold"
-                                  >
-                                    تصميم صفحة ويب
-                                  </strong>
+                                <!-- الخدمة -->
+                                <td class="ps-0 pe-0" style="width: 50%">
+                                  <div class="maxwidth">
+                                    <div class="m-0" style="width: 185px">
+                                      <strong
+                                        class="text-purple small cairo fw-bold"
+                                      >
+                                        تصميم صفحة ويب
+                                      </strong>
+                                      <p class="fs-10 text-muted">
+                                        هو ببساطة نص شكلي (بمعنى أن الغاية هي
+                                        الشكل وليس المحتوى)
+                                      </p>
+                                    </div>
+                                  </div>
                                 </td>
                                 <!-- السعر -->
-                                <td style="width: 15%">155$</td>
+                                <td style="width: 40%">
+                                  <div class="fs-10 fw-bold maxwidth-lg">
+                                    155$
+                                  </div>
+                                </td>
                                 <!-- المدة -->
-                                <td style="width: 30%">13 ساعة</td>
+                                <td>
+                                  <div
+                                    class="fs-10 fw-bold maxwidth-lg"
+                                    style="width: 120px"
+                                  >
+                                    13 ساعة
+                                  </div>
+                                </td>
                                 <!-- الحالة -->
                                 <td>
-                                  <span class="badge badge-pill badge-warning"
-                                    >تحت الانشاء</span
-                                  >
+                                  <div class="maxwidth-lg">
+                                    <span
+                                      v-if="order.state == 'continuee'"
+                                      class="badge badge-pill badge-warning"
+                                    >
+                                      تحت الانشاء</span
+                                    >
+                                    <span
+                                      v-if="order.state == 'done'"
+                                      class="badge badge-pill badge-success"
+                                      >تم</span
+                                    >
+                                    <span
+                                      v-if="order.state == 'refused'"
+                                      class="badge badge-pill badge-danger"
+                                      >ملغي</span
+                                    >
+                                  </div>
                                 </td>
                               </tr>
                             </tbody>
@@ -139,8 +171,8 @@
                                         src="@/assets/images/learning.webp"
                                         alt="..."
                                         class="rounded"
-                                        width="50"
-                                        height="50"
+                                        width="45"
+                                        height="45"
                                       />
                                     </div>
                                     <div class="col-8">
@@ -161,11 +193,8 @@
                               </div>
                             </div>
                           </div>
-                          <!-- / .list-group -->
                         </div>
-                        <!-- / .card-body -->
                       </div>
-                      <!-- / .card -->
                     </div>
                   </div>
                 </div>
@@ -208,6 +237,12 @@ export default {
           percent: "18 %",
         },
       ],
+      orders: [
+        { id: 1, state: "done" },
+        { id: 2, state: "continuee" },
+        { id: 3, state: "refused" },
+        { id: 4, state: "done" },
+      ],
     };
   },
 };
@@ -220,43 +255,62 @@ export default {
 .border {
   border: var(--bs-border-width) var(--bs-border-style) #dee2e65e !important;
 }
-.table thead th {
-  color: #433472;
-}
-table > thead th {
-  text-align: center;
-  /* width: 30% !important; */
-  padding: 10px;
-}
+/* table */
 table > thead tr {
   border-bottom: 1px solid rgba(189, 187, 187, 0.37);
   border-top: 1px solid rgba(189, 187, 187, 0.37);
 }
+table > thead th {
+  color: #433472;
+  text-align: start;
+  padding: 10px;
+}
 table > tbody td {
-  text-align: center;
-  width: 30%;
+  text-align: start;
+  /* width: 30%; */
   color: #433472 !important;
-  padding: 15px 0;
+  padding: 15px 10px;
 }
 table > tbody td img {
   object-fit: cover;
-  /* width: 100%; */
 }
 .badge-pill {
   border-radius: 14px !important;
   padding: 8px 10px !important;
+  width: 85px;
 }
 .badge-warning {
-  color: #212529;
   background-color: #ffd9503b;
   color: #f0bc00;
 }
-.card-header {
-  border-bottom: var(--bs-card-border-width) solid rgb(108 93 93 / 18%);
+.badge-success {
+  background-color: #24856538;
+  color: #248565;
 }
+.badge-danger {
+  background-color: #dc354634;
+  color: #dc3545;
+}
+
 @media only screen and (min-width: 992px) {
+  table tbody td .maxwidth-lg {
+    width: 75px !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  table tbody td .maxwidth {
+    width: 190px !important;
+  }
+  table tbody td img {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+  }
+  table > thead th {
+    text-align: center;
+  }
   table > tbody td {
-    padding: 15px 0;
+    text-align: center;
   }
 }
 </style>

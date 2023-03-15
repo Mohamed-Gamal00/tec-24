@@ -20,6 +20,7 @@ import UseraccountView from "../views/userDashboard/account/UseraccountView.vue"
 /* admin */
 import DashboardView from "../views/admin/dashboard/DashboardView.vue";
 import UsersView from "../views/admin/users/UsersView.vue";
+import AdduserView from "../views/admin/users/AdduserView.vue";
 const routes = [
   {
     path: "/",
@@ -126,6 +127,11 @@ const routes = [
     path: "/users",
     name: "users",
     component: UsersView,
+  },
+  {
+    path: "/adduser",
+    name: "adduser",
+    component: AdduserView,
   },
 ];
 
