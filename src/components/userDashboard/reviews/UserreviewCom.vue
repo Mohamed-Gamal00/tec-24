@@ -120,40 +120,6 @@ export default {
 </script>
 
 <style scoped>
-.table thead th {
-  color: #433472;
-  padding: 10px;
-}
-table > tbody td {
-  padding: 10px 10px;
-}
-table > thead tr {
-  border-bottom: 1px solid rgba(189, 187, 187, 0.37);
-  border-top: 1px solid rgba(189, 187, 187, 0.37);
-}
-
-table > tbody td img {
-  object-fit: cover;
-}
-
-@media only screen and (max-width: 600px) {
-  img {
-    object-fit: cover;
-    max-width: 50px !important;
-    max-height: 50px !important;
-  }
-}
-/* reviews */
-.bg-gold {
-  color: gold;
-}
-/* scroll */
-/* width */
-::-webkit-scrollbar {
-  width: 5px;
-  height: 1px;
-}
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: #433472;

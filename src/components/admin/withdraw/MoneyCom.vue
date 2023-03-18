@@ -9,8 +9,10 @@
                 class="card-header pt-3 pb-3 border-0 bg-purple"
                 style="border-radius: 0"
               >
-                <strong class="card-title mb-0 text-white">المستخدمون </strong>
-                <strong class="float-right m-0 p-0 text-white">اضافة</strong>
+                <strong class="card-title mb-0 text-white"
+                  >سجل الانساحابات
+                </strong>
+                <!-- <strong class="float-right m-0 p-0 text-white">اضافة</strong> -->
               </div>
               <div class="card-body pt-3 pb-3 ps-0 pe-0">
                 <div class="list-group list-group-flush my-n3 p-0">
@@ -21,49 +23,62 @@
                       >
                         <thead>
                           <tr>
+                            <th scope="col" class="text-center">الصورة</th>
                             <th scope="col">المستخدم</th>
-                            <th scope="col">نوع الحساب</th>
-                            <th scope="col">المكاسب</th>
-                            <th scope="col">تاريخ التسجيل</th>
+                            <th scope="col">الي</th>
+                            <th scope="col">الكمية</th>
                             <th scope="col">الحالة</th>
                             <th scope="col">الخيارات</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr v-for="user in 15" :key="user.id">
-                            <td>
-                              <div class="fw-bold fs-10 phone">
-                                <span class="m-3">mohamed gamal</span>
+                            <td style="width: 10%" class="text-center">
+                              <div>
+                                <span class="">
+                                  <img
+                                    src="@/assets/images/hassan.jpg"
+                                    alt="img"
+                                    class="rounded"
+                                    width="50"
+                                    height="50"
+                                  />
+                                </span>
                               </div>
                             </td>
                             <td>
                               <div class="fw-bold fs-10 phone">
-                                <span class="m-3 text-success">مشتري</span>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="fw-bold fs-10">
-                                <span class="m-3 text-danger">$300</span>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="fw-bold fs-10 phone">
-                                <span class="m-3">منذ ساعة</span>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="fw-bold fs-10">
-                                <span class="m-3 text-success">نشط</span>
+                                <span class="m-3 d-block my-1"
+                                  >mohamed gamal</span
+                                >
+                                <span class="m-3 d-block my-1"
+                                  >mg232416@gmail.com</span
+                                >
                               </div>
                             </td>
                             <td>
                               <div class="fw-bold fs-10 phone">
-                                <!-- <span class="m-3"
-                                  ><FontAwesome icon="trash" class="fe-16" />
-                                  <FontAwesome
-                                    icon="pen-to-square"
-                                    class="fe-16 me-2"
-                                /></span> -->
+                                <span class="m-3 d-block my-1"
+                                  >mg232416@gmail.com</span
+                                >
+                              </div>
+                            </td>
+                            <td>
+                              <div class="fw-bold fs-10 phone">
+                                <span class="m-3 text-success d-block my-1"
+                                  >$300</span
+                                >
+                              </div>
+                            </td>
+                            <td>
+                              <div class="fw-bold fs-10 phone">
+                                <span class="m-3 text-success d-block my-1"
+                                  >معلقة</span
+                                >
+                              </div>
+                            </td>
+                            <td>
+                              <div class="fw-bold fs-10 phone">
                                 <button class="btn">
                                   <FontAwesome
                                     icon="trash"
@@ -95,7 +110,7 @@
 
 <script>
 export default {
-  name: "DashboardCom",
+  name: "MoneyCom",
   data() {
     return {};
   },
@@ -105,7 +120,7 @@ export default {
 <style scoped>
 @media only screen and (max-width: 600px) {
   table > tbody td .phone {
-    width: 125px;
+    width: 150px;
   }
 }
 .btn {

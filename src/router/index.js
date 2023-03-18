@@ -21,6 +21,11 @@ import UseraccountView from "../views/userDashboard/account/UseraccountView.vue"
 import DashboardView from "../views/admin/dashboard/DashboardView.vue";
 import UsersView from "../views/admin/users/UsersView.vue";
 import AdduserView from "../views/admin/users/AdduserView.vue";
+import LevelsView from "../views/admin/users/LevelsView.vue";
+import MoneyView from "../views/admin/withdraw/MoneyView.vue";
+import FoldersView from "../views/admin/folders/FoldersView.vue";
+import CartsView from "../views/admin/carts/CartsView.vue";
+import BillsView from "../views/admin/bills/BillsView.vue";
 const routes = [
   {
     path: "/",
@@ -117,7 +122,7 @@ const routes = [
     name: "account",
     component: UseraccountView,
   },
-  /* dashboard */
+  /* admin */
   {
     path: "/admin",
     name: "admin",
@@ -132,6 +137,31 @@ const routes = [
     path: "/adduser",
     name: "adduser",
     component: AdduserView,
+  },
+  {
+    path: "/levels",
+    name: "levels",
+    component: LevelsView,
+  },
+  {
+    path: "/money",
+    name: "money",
+    component: MoneyView,
+  },
+  {
+    path: "/folders",
+    name: "folders",
+    component: FoldersView,
+  },
+  {
+    path: "/carts",
+    name: "carts",
+    component: CartsView,
+  },
+  {
+    path: "/bills",
+    name: "bills",
+    component: BillsView,
   },
 ];
 

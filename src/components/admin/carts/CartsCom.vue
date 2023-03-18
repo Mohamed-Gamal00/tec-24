@@ -9,61 +9,83 @@
                 class="card-header pt-3 pb-3 border-0 bg-purple"
                 style="border-radius: 0"
               >
-                <strong class="card-title mb-0 text-white">المستخدمون </strong>
-                <strong class="float-right m-0 p-0 text-white">اضافة</strong>
+                <strong class="card-title mb-0 text-white">العربات </strong>
+                <!-- <strong class="float-right m-0 p-0 text-white">اضافة</strong> -->
               </div>
               <div class="card-body pt-3 pb-3 ps-0 pe-0">
                 <div class="list-group list-group-flush my-n3 p-0">
                   <div class="list-group-item">
-                    <div class="row card-body my-1 pb-1">
+                    <div class="row card-body pb-1">
                       <table
                         class="table admin table-borderless tbody table-striped"
                       >
                         <thead>
                           <tr>
-                            <th scope="col">المستخدم</th>
-                            <th scope="col">نوع الحساب</th>
-                            <th scope="col">المكاسب</th>
-                            <th scope="col">تاريخ التسجيل</th>
+                            <th scope="col">العربة</th>
+                            <th scope="col">السعر</th>
+                            <th scope="col">الزيارات</th>
+                            <th scope="col">المبيعات</th>
+                            <th scope="col">قاعة الانتظار</th>
+                            <th scope="col">التقييم</th>
+                            <th scope="col">انشئت منذ</th>
                             <th scope="col">الحالة</th>
                             <th scope="col">الخيارات</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr v-for="user in 15" :key="user.id">
+                            <!-- الملف -->
+                            <td>
+                              <div class="fw-bold fs-10 phone td1">
+                                <span class="m-3 d-block"
+                                  >تسميات توضيحية جذابة على وسائل التواصل
+                                  الاجتماعي</span
+                                >
+                              </div>
+                            </td>
+
                             <td>
                               <div class="fw-bold fs-10 phone">
-                                <span class="m-3">mohamed gamal</span>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="fw-bold fs-10 phone">
-                                <span class="m-3 text-success">مشتري</span>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="fw-bold fs-10">
-                                <span class="m-3 text-danger">$300</span>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="fw-bold fs-10 phone">
-                                <span class="m-3">منذ ساعة</span>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="fw-bold fs-10">
-                                <span class="m-3 text-success">نشط</span>
+                                <span class="m-3 d-block">$300</span>
                               </div>
                             </td>
                             <td>
                               <div class="fw-bold fs-10 phone">
-                                <!-- <span class="m-3"
-                                  ><FontAwesome icon="trash" class="fe-16" />
-                                  <FontAwesome
-                                    icon="pen-to-square"
-                                    class="fe-16 me-2"
-                                /></span> -->
+                                <span class="m-3 text-success d-block">1</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="fw-bold fs-10 phone">
+                                <span class="m-3 text-success d-block">3</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="fw-bold fs-10 phone">
+                                <span class="m-3 text-success d-block">4</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="fw-bold fs-10 phone">
+                                <span class="m-3 text-success d-block">5</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="fw-bold fs-10 phone">
+                                <span class="m-3 text-success d-block"
+                                  >منذ اسبوع</span
+                                >
+                              </div>
+                            </td>
+                            <td>
+                              <div class="fw-bold fs-10 phone">
+                                <span class="m-3 text-success d-block"
+                                  >نشط</span
+                                >
+                              </div>
+                            </td>
+                            <!-- الخيارات -->
+                            <td class="lasttd">
+                              <div class="fw-bold fs-10 phone lasttd">
                                 <button class="btn">
                                   <FontAwesome
                                     icon="trash"
@@ -95,7 +117,7 @@
 
 <script>
 export default {
-  name: "DashboardCom",
+  name: "CartsCom",
   data() {
     return {};
   },
@@ -103,9 +125,18 @@ export default {
 </script>
 
 <style scoped>
+table > tbody td .td1 {
+  width: 182px;
+}
+table .lasttd {
+  width: 100px !important;
+}
 @media only screen and (max-width: 600px) {
   table > tbody td .phone {
-    width: 125px;
+    width: 150px;
+  }
+  table > tbody td .td1 {
+    width: 182px;
   }
 }
 .btn {

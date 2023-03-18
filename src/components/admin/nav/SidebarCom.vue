@@ -35,27 +35,96 @@
                 <!-- <i class="fe fe-home fe-16"></i> -->
                 <li class="pe-2">
                   <FontAwesome icon="users" class="fe-16" />
-                  <span class="ml-3 item-text">المستخدمون</span
-                  ><span class="sr-only">(تصفح الكل)</span>
+                  <span class="ml-3 item-text">المستخدمون</span>
                 </li>
               </router-link>
               <ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
-                <li class="nav-item active">
-                  <a class="nav-link pl-3" href="./index.html"
-                    ><span class="ml-1 item-text">انشاء جديد</span></a
-                  >
-                </li>
+                <router-link :to="{ name: 'adduser' }">
+                  <li class="nav-item">
+                    <a class="nav-link pl-3"
+                      ><span class="ml-1 item-text">انشاء جديد</span></a
+                    >
+                  </li>
+                </router-link>
+                <router-link :to="{ name: 'levels' }">
+                  <li class="nav-item">
+                    <a class="nav-link pl-3"
+                      ><span class="ml-1 item-text">المستويات</span></a
+                    >
+                  </li>
+                </router-link>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="./dashboard-analytics.html"
-                    ><span class="ml-1 item-text">المستويات</span></a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="./dashboard-sales.html"
+                  <a class="nav-link pl-3"
                     ><span class="ml-1 item-text">التأكيد</span></a
                   >
                 </li>
               </ul>
+            </li>
+          </ul>
+          <!-- الانسحابات -->
+          <ul class="navbar-nav flex-fill w-100 mb-2 small">
+            <li class="nav-item dropdown">
+              <router-link
+                class="text-white mb-1 nav-link"
+                :to="{ name: 'money' }"
+              >
+                <!-- <i class="fe fe-home fe-16"></i> -->
+                <li class="pe-2">
+                  <FontAwesome icon="comments-dollar" class="fe-16" />
+                  <span class="ml-3 item-text">الانسحابات</span>
+                </li>
+              </router-link>
+              <!-- <ul class="collapse list-unstyled pl-4 w-100" id="Withdraw">
+                <router-link :to="{ name: 'money' }">
+                  <li class="nav-item">
+                    <a class="nav-link pl-3"
+                      ><span class="ml-1 item-text fs-10">عرض الكل</span></a
+                    >
+                  </li>
+                </router-link>
+              </ul> -->
+            </li>
+          </ul>
+          <!-- الملفات -->
+          <ul class="navbar-nav flex-fill w-100 mb-2 small">
+            <li class="nav-item dropdown">
+              <router-link
+                class="text-white mb-1 nav-link"
+                :to="{ name: 'folders' }"
+              >
+                <li class="pe-2">
+                  <FontAwesome icon="folder-open" class="fe-16" />
+                  <span class="ml-3 item-text">الملفات</span>
+                </li>
+              </router-link>
+            </li>
+          </ul>
+          <!-- العربات -->
+          <ul class="navbar-nav flex-fill w-100 mb-2 small">
+            <li>
+              <router-link
+                class="text-white mb-1 nav-link"
+                :to="{ name: 'carts' }"
+              >
+                <li class="pe-2">
+                  <FontAwesome icon="cart-shopping" class="fe-16" />
+                  <span class="ml-3 item-text">العربات</span>
+                </li>
+              </router-link>
+            </li>
+          </ul>
+          <!-- الفواتير -->
+          <ul class="navbar-nav flex-fill w-100 mb-2 small">
+            <li>
+              <router-link
+                class="text-white mb-1 nav-link"
+                :to="{ name: 'bills' }"
+              >
+                <li class="pe-2">
+                  <FontAwesome icon="dollar" class="fe-16" />
+                  <span class="ml-3 item-text">الفواتير</span>
+                </li>
+              </router-link>
             </li>
           </ul>
         </nav>
@@ -65,8 +134,21 @@
 </template>
 
 <script>
+import $ from "jquery";
 export default {
   name: "SidebarCom",
+  mounted() {
+    this.lastproject();
+  },
+  methods: {
+    lastproject() {
+      $(document).ready(function () {
+        $(".icon").click(function () {
+          $(".show").slideToggle("slow");
+        });
+      });
+    },
+  },
 };
 </script>
 

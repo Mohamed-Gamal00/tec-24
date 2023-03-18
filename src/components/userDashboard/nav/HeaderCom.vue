@@ -42,7 +42,7 @@
         <router-link
           v-if="$route.name == 'account'"
           class="text-white"
-          :to="{ name: 'reviews' }"
+          :to="{ name: 'account' }"
         >
           <i class="fe fe-user fe-16"></i>
           <span class="ml-2 item-text">حسابي</span>
