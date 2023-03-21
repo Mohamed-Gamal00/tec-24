@@ -26,6 +26,10 @@ import MoneyView from "../views/admin/withdraw/MoneyView.vue";
 import FoldersView from "../views/admin/folders/FoldersView.vue";
 import CartsView from "../views/admin/carts/CartsView.vue";
 import BillsView from "../views/admin/bills/BillsView.vue";
+import OrdersView from "../views/admin/orders/OrdersView.vue";
+import CategoriesView from "../views/admin/categories/CategoriesView.vue";
+import AddcatView from "../views/admin/categories/AddcatView.vue";
+import SubcategoriesView from "../views/admin/categories/SubcategoriesView.vue";
 const routes = [
   {
     path: "/",
@@ -162,6 +166,26 @@ const routes = [
     path: "/bills",
     name: "bills",
     component: BillsView,
+  },
+  {
+    path: "/orders",
+    name: "orders",
+    component: OrdersView,
+  },
+  {
+    path: "/categories",
+    name: "categories",
+    component: CategoriesView,
+  },
+  {
+    path: "/addcat",
+    name: "addcat",
+    component: AddcatView,
+  },
+  {
+    path: "/subcategories",
+    name: "subcategories",
+    component: SubcategoriesView,
   },
 ];
 

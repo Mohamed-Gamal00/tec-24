@@ -8,7 +8,7 @@
               class="card-header pt-3 pb-3 border-0 bg-purple"
               style="border-radius: 0"
             >
-              <strong class="card-title mb-0 text-white">اضافة مستخدم </strong>
+              <strong class="card-title mb-0 text-white">إنشاء جديد </strong>
               <button class="float-right m-0 p-0 text-white">اضافة</button>
             </div>
             <div>
@@ -285,7 +285,7 @@
                             class="btn text-white fs-10 me-2"
                             :to="{ name: 'login' }"
                           >
-                            اضافة مستخدم
+                            إانشاء جديد
                           </button>
                         </div>
                       </div>

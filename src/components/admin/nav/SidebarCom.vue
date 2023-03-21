@@ -23,11 +23,13 @@
                 <span class="ml-3 item-text">لوحة التحكم</span>
               </li>
             </router-link>
-
+          </ul>
+          <!-- المستخدمون -->
+          <ul class="navbar-nav flex-fill w-100 mb-2 small">
             <li class="nav-item dropdown">
               <router-link
                 class="dropdown-toggle text-white mb-1 nav-link"
-                :to="{ name: 'users' }"
+                :to="{ name: this.$route.name }"
                 href="#dashboard"
                 data-toggle="collapse"
                 aria-expanded="false"
@@ -35,29 +37,46 @@
                 <!-- <i class="fe fe-home fe-16"></i> -->
                 <li class="pe-2">
                   <FontAwesome icon="users" class="fe-16" />
-                  <span class="ml-3 item-text">المستخدمون</span>
+
+                  <span class="ml-3 item-text" v-if="$route.name == 'users'"
+                    >المستخدمون</span
+                  >
+                  <span class="ml-3 item-text" v-else></span>
+                  <span class="ml-3 item-text" v-if="$route.name == 'adduser'"
+                    >إنشاء جديد</span
+                  >
+                  <span class="ml-3 item-text" v-if="$route.name == 'levels'"
+                    >المستويات</span
+                  >
                 </li>
               </router-link>
               <ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
+                <router-link :to="{ name: 'users' }">
+                  <li class="nav-item">
+                    <a class="nav-link pl-3"
+                      ><span class="ml-1 item-text fs-10">المستخدمون</span></a
+                    >
+                  </li>
+                </router-link>
                 <router-link :to="{ name: 'adduser' }">
                   <li class="nav-item">
                     <a class="nav-link pl-3"
-                      ><span class="ml-1 item-text">انشاء جديد</span></a
+                      ><span class="ml-1 item-text fs-10">انشاء جديد</span></a
                     >
                   </li>
                 </router-link>
                 <router-link :to="{ name: 'levels' }">
                   <li class="nav-item">
                     <a class="nav-link pl-3"
-                      ><span class="ml-1 item-text">المستويات</span></a
+                      ><span class="ml-1 item-text fs-10">المستويات</span></a
                     >
                   </li>
                 </router-link>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link pl-3"
                     ><span class="ml-1 item-text">التأكيد</span></a
                   >
-                </li>
+                </li> -->
               </ul>
             </li>
           </ul>
@@ -127,6 +146,47 @@
               </router-link>
             </li>
           </ul>
+          <!-- الاقسام -->
+          <ul class="navbar-nav flex-fill w-100 mb-2 small">
+            <li class="nav-item dropdown">
+              <router-link
+                class="dropdown-toggle text-white mb-1 nav-link"
+                :to="{ name: this.$route.name }"
+                href="#categories"
+                data-toggle="collapse"
+                aria-expanded="false"
+              >
+                <li class="pe-2">
+                  <FontAwesome icon="users" class="fe-16" />
+
+                  <span class="ml-3 item-text">الاقسام</span>
+                </li>
+              </router-link>
+              <ul class="collapse list-unstyled pl-4 w-100" id="categories">
+                <router-link :to="{ name: 'categories' }">
+                  <li class="nav-item">
+                    <a class="nav-link pl-3"
+                      ><span class="ml-1 item-text fs-10">الاقسام</span></a
+                    >
+                  </li>
+                </router-link>
+                <router-link :to="{ name: 'subcategories' }">
+                  <li class="nav-item">
+                    <a class="nav-link pl-3"
+                      ><span class="ml-1 item-text fs-10"
+                        >الاقسام الفرعية</span
+                      ></a
+                    >
+                  </li>
+                </router-link>
+                <!-- <li class="nav-item">
+                  <a class="nav-link pl-3"
+                    ><span class="ml-1 item-text">التأكيد</span></a
+                  >
+                </li> -->
+              </ul>
+            </li>
+          </ul>
         </nav>
       </aside>
     </div>
@@ -153,6 +213,16 @@ export default {
 </script>
 
 <style scoped>
+.vertical
+  .sidebar-left
+  .navbar-nav
+  > .nav-item
+  > a.dropdown-toggle[data-v-57838f61]::after {
+  display: inline-block;
+  font-size: 20px !important;
+  position: relative !important;
+  top: -12px !important;
+}
 ul a.router-link-exact-active {
   padding: 10px 0;
   font-weight: bold;

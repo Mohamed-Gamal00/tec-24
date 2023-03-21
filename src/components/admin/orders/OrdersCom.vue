@@ -9,7 +9,7 @@
                 class="card-header pt-3 pb-3 border-0 bg-purple"
                 style="border-radius: 0"
               >
-                <strong class="card-title mb-0 text-white">الفواتير </strong>
+                <strong class="card-title mb-0 text-white">الطلبات </strong>
                 <!-- <strong class="float-right m-0 p-0 text-white">اضافة</strong> -->
               </div>
               <div class="card-body pt-3 pb-3 ps-0 pe-0">
@@ -21,17 +21,23 @@
                       >
                         <thead>
                           <tr>
+                            <th scope="col">الرقم التعريفي</th>
                             <th scope="col">الصورة</th>
                             <th scope="col">المشتري</th>
-                            <th scope="col">الدفع</th>
-                            <th scope="col">المبلغ الكامل</th>
+                            <th scope="col">المبلغ كامل</th>
+                            <th scope="col">المبلغ الفرعي</th>
+                            <th scope="col">الضريبة</th>
                             <th scope="col">التاريخ</th>
-                            <th scope="col">الحالة</th>
                             <th scope="col">الخيارات</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr v-for="user in 15" :key="user.id">
+                            <td style="width: 10%">
+                              <div>
+                                <span class=""> 0101452445874555 </span>
+                              </div>
+                            </td>
                             <td style="width: 10%">
                               <div>
                                 <span class="">
@@ -47,20 +53,22 @@
                             </td>
                             <!-- الملف -->
                             <td>
-                              <div class="fw-bold fs-10 phone td1">
-                                <span class="m-3 d-block"
-                                  >تسميات توضيحية جذابة على وسائل التواصل
-                                  الاجتماعي</span
+                              <div
+                                class="fw-bold fs-10 phone td1 ms-0 me-0"
+                                style="display: contents"
+                              >
+                                <span class="m-3 d-block my-1">
+                                  mohamed gamal</span
+                                >
+                                <span class="m-3 d-block my-1"
+                                  >mg232416@gmail.com</span
                                 >
                               </div>
                             </td>
 
                             <td>
                               <div class="fw-bold fs-10 phone">
-                                <span class="m-3 d-block my-1">حساب بنكي</span>
-                                <span class="m-3 d-block my-1"
-                                  >131414541514441</span
-                                >
+                                <span class="m-3 d-block my-1">1314$</span>
                               </div>
                             </td>
 
@@ -74,16 +82,14 @@
 
                             <td>
                               <div class="fw-bold fs-10 phone">
-                                <span class="m-3 text-purple d-block"
-                                  >منذ 15 ساعة</span
-                                >
+                                <span class="m-3 text-purple d-block">$5</span>
                               </div>
                             </td>
 
                             <td>
                               <div class="fw-bold fs-10 phone">
                                 <span class="m-3 text-purple d-block"
-                                  >معلقة</span
+                                  >منذ ساعة</span
                                 >
                               </div>
                             </td>
@@ -121,7 +127,7 @@
 
 <script>
 export default {
-  name: "BillsCom",
+  name: "OrdersCom",
   data() {
     return {};
   },
@@ -129,8 +135,13 @@ export default {
 </script>
 
 <style scoped>
+table > thead th {
+  padding: 10px;
+  text-align: center !important;
+}
 table > tbody td {
   padding: 10px;
+  text-align: center;
 }
 table > tbody td .td1 {
   width: 182px;
