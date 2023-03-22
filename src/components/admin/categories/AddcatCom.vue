@@ -6,7 +6,7 @@
           <div class="col-md-12 p-0">
             <div class="card border-0">
               <div
-                class="card-header pt-3 pb-3 border-0 bg-purple"
+                class="card-header pt-3 pb-3 mb-lg-3 border-0 bg-purple"
                 style="border-radius: 0"
               >
                 <div class="btn float-left">
@@ -18,87 +18,91 @@
               </div>
               <div class="row justify-content-center">
                 <div class="col-md-10">
-                  <div class="card mb-4">
-                    <div class="card-header">
-                      <strong class="card-title">Form row</strong>
-                    </div>
+                  <div class="card shadows border-0 pt-3">
                     <div class="card-body">
+                      <span>
+                        <p class="text-purple mb-5 mt-lg-2">
+                          <strong>أضف قسم جديد</strong>
+                        </p>
+                      </span>
+
                       <form>
                         <div class="form-row">
-                          <div class="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
-                            <input
-                              type="email"
-                              class="form-control"
-                              id="inputEmail5"
-                            />
-                          </div>
-                          <div class="form-group col-md-6">
-                            <label for="inputPassword4">Password</label>
-                            <input
-                              type="password"
-                              class="form-control"
-                              id="inputPassword5"
-                            />
+                          <div class="form-group col-md-12">
+                            <label for="text">اسم القسم</label>
+                            <input type="text" class="form-control" id="text" />
                           </div>
                         </div>
                         <div class="form-group">
-                          <label for="inputAddress">Address</label>
-                          <input
-                            type="text"
+                          <label for="exampleFormControlTextarea1">الوصف</label>
+                          <textarea
                             class="form-control"
-                            id="inputAddress5"
-                            placeholder="1234 Main St"
-                          />
+                            id="exampleFormControlTextarea1"
+                            rows="3"
+                          ></textarea>
                         </div>
-                        <div class="form-group">
-                          <label for="inputAddress2">Address 2</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="inputAddress6"
-                            placeholder="Apartment, studio, or floor"
-                          />
-                        </div>
-                        <div class="form-row">
-                          <div class="form-group col-md-6">
-                            <label for="inputCity">City</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="inputCity5"
-                            />
-                          </div>
-                          <div class="form-group col-md-4">
-                            <label for="inputState">State</label>
-                            <select id="inputState5" class="form-control">
-                              <option selected>Choose...</option>
-                              <option>...</option>
-                            </select>
-                          </div>
-                          <div class="form-group col-md-2">
-                            <label for="inputZip">Zip</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="inputZip5"
-                            />
-                          </div>
-                        </div>
-                        <div class="form-group">
+                        <!-- مرئي / غير مرئي -->
+                        <div
+                          class="form-row mr-5 my-4"
+                          style="position: relative; right: 17px"
+                        >
                           <div class="form-check">
                             <input
                               class="form-check-input"
-                              type="checkbox"
-                              id="gridCheck5"
+                              type="radio"
+                              name="exampleRadios"
+                              id="exampleRadios1"
+                              value="option1"
+                              checked
                             />
-                            <label class="form-check-label" for="gridCheck5">
-                              Check me out
+                            <label
+                              class="form-check-label p-0"
+                              for="exampleRadios1"
+                            >
+                              مرئي
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="exampleRadios"
+                              id="exampleRadios2"
+                              value="option2"
+                            />
+                            <label
+                              class="form-check-label p-0"
+                              for="exampleRadios2"
+                            >
+                              غير مرئي
                             </label>
                           </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">
-                          Sign in
+                        <!-- image -->
+                        <div class="row">
+                          <div class="col-md-6 col-lg-12">
+                            <div class="form-group mb-3">
+                              <label
+                                for="customFile"
+                                class="mb-1 text-purple fs-10 fw-bold"
+                                >اضافة صورة رمزية</label
+                              >
+                              <div class="custom-file">
+                                <input
+                                  type="file"
+                                  class="custom-file-input"
+                                  id="customFile"
+                                />
+                                <label
+                                  class="custom-file-label"
+                                  for="customFile"
+                                ></label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn text-white">
+                          أضف
                         </button>
                       </form>
                     </div>
@@ -127,6 +131,9 @@ export default {
 </script>
 
 <style scoped>
+.shadows {
+  box-shadow: 0 0rem -1rem rgba(0, 0, 0, 0.15) !important;
+}
 .table th {
   text-align: center;
 }

@@ -59,11 +59,8 @@
                             </td>
                             <td>
                               <div class="fw-bold fs-10 phone">
-                                <span class="m-3 d-block my-1"
-                                  >mohamed gamal</span
-                                >
-                                <span class="m-3 d-block my-1"
-                                  >mg232416@gmail.com</span
+                                <span class="m-3 d-block my-1 text-success"
+                                  >مرئي</span
                                 >
                               </div>
                             </td>

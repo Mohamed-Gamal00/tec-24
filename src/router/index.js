@@ -168,8 +168,8 @@ const routes = [
     component: BillsView,
   },
   {
-    path: "/orders",
-    name: "orders",
+    path: "/orderss",
+    name: "orderss",
     component: OrdersView,
   },
   {
