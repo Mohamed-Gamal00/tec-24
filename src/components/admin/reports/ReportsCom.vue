@@ -9,58 +9,35 @@
                 class="card-header pt-3 pb-3 border-0 bg-purple"
                 style="border-radius: 0"
               >
-                <div class="btn float-left">
-                  <strong class="card-title mb-0 text-white"
-                    >الاقسام الفرعية</strong
-                  >
-                </div>
-                <router-link :to="{ name: 'addsub' }">
-                  <button class="btn float-right click">
-                    <strong class="float-right m-0 p-0">اضافة</strong>
-                  </button>
-                </router-link>
-                <!-- <button class="btn float-right click">
-                  <strong class="float-right m-0 p-0">اضافة</strong>
-                </button> -->
+                <strong class="card-title mb-0 text-white">التقارير </strong>
+                <!-- <strong class="float-right m-0 p-0 text-white">اضافة</strong> -->
               </div>
               <div class="card-body pt-3 pb-3 ps-0 pe-0">
                 <div class="list-group list-group-flush my-n3 p-0">
                   <div class="list-group-item">
-                    <div class="row card-body my-1 pb-1">
+                    <div class="row card-body pb-1">
                       <table
                         class="table admin table-borderless tbody table-striped"
                       >
                         <thead>
                           <tr>
-                            <th scope="col">الأقسام الفرعية</th>
-                            <th scope="col">الأقسام الرئيسة</th>
-                            <th scope="col">صور وسائل التواصل الاجتماعي</th>
+                            <th scope="col">الرقم التعريفي</th>
+                            <th scope="col">الصورة</th>
+                            <th scope="col">المشتري</th>
+                            <th scope="col">المبلغ الكامل</th>
+                            <th scope="col">المبلغ الفرعي</th>
+                            <th scope="col">التاريخ</th>
+                            <th scope="col">الحالة</th>
                             <th scope="col">الخيارات</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr v-for="user in 15" :key="user.id">
-                            <!-- القسم -->
                             <td>
-                              <div class="fw-bold fs-10 phone">
-                                <span class="m-3 d-block my-1">البيانات</span>
-                                <span class="m-3 d-block my-1"
-                                  >العثور على افضل خدمات البيانات</span
-                                >
+                              <div class="fw-bold fs-10 phone td1">
+                                <span class="m-3 d-block">010147852365875</span>
                               </div>
                             </td>
-
-                            <td>
-                              <div class="fw-bold fs-10 phone">
-                                <span class="m-3 d-block my-1"
-                                  >mohamed gamal</span
-                                >
-                                <span class="m-3 d-block my-1"
-                                  >mg232416@gmail.com</span
-                                >
-                              </div>
-                            </td>
-
                             <td style="width: 10%">
                               <div>
                                 <span class="">
@@ -74,9 +51,46 @@
                                 </span>
                               </div>
                             </td>
+                            <!-- الملف -->
+                            <td>
+                              <div class="fw-bold fs-10 phone td1">
+                                <span class="d-block">mohamed gamal</span>
+                                <span class="d-block">mg232416@gmail.com</span>
+                              </div>
+                            </td>
 
                             <td>
                               <div class="fw-bold fs-10 phone">
+                                <span class="m-3 d-block my-1">$1000</span>
+                              </div>
+                            </td>
+
+                            <td>
+                              <div class="fw-bold fs-10 phone">
+                                <span class="m-3 text-purple d-block"
+                                  >$300</span
+                                >
+                              </div>
+                            </td>
+
+                            <td>
+                              <div class="fw-bold fs-10 phone">
+                                <span class="m-3 text-purple d-block"
+                                  >منذ 15 ساعة</span
+                                >
+                              </div>
+                            </td>
+
+                            <td>
+                              <div class="fw-bold fs-10 phone">
+                                <span class="m-3 text-purple d-block"
+                                  >معلقة</span
+                                >
+                              </div>
+                            </td>
+                            <!-- الخيارات -->
+                            <td class="lasttd">
+                              <div class="fw-bold fs-10 phone lasttd">
                                 <button class="btn">
                                   <FontAwesome
                                     icon="trash"
@@ -108,7 +122,7 @@
 
 <script>
 export default {
-  name: "SubcategoriesCom",
+  name: "ReportsCom",
   data() {
     return {};
   },
@@ -116,16 +130,26 @@ export default {
 </script>
 
 <style scoped>
-.table th {
+table > thead th {
   text-align: center;
 }
-.table td {
+table > tbody td {
   text-align: center;
-  width: 21% !important;
+
+  padding: 10px;
+}
+table > tbody td .td1 {
+  width: 182px;
+}
+table .lasttd {
+  width: 100px !important;
 }
 @media only screen and (max-width: 600px) {
   table > tbody td .phone {
     width: 150px;
+  }
+  table > tbody td .td1 {
+    width: 182px;
   }
 }
 .btn {
@@ -133,13 +157,5 @@ export default {
 }
 .btn:hover .fe-16 {
   font-size: 14px;
-}
-.click {
-  transition: all 0.3s ease-in-out;
-  color: white;
-}
-.click:hover {
-  background-color: white !important;
-  color: darkslateblue !important;
 }
 </style>

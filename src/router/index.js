@@ -30,6 +30,8 @@ import OrdersView from "../views/admin/orders/OrdersView.vue";
 import CategoriesView from "../views/admin/categories/CategoriesView.vue";
 import AddcatView from "../views/admin/categories/AddcatView.vue";
 import SubcategoriesView from "../views/admin/categories/SubcategoriesView.vue";
+import AddsubView from "../views/admin/categories/AddsubView.vue";
+import ReportsView from "../views/admin/reports/ReportsView.vue";
 const routes = [
   {
     path: "/",
@@ -186,6 +188,16 @@ const routes = [
     path: "/subcategories",
     name: "subcategories",
     component: SubcategoriesView,
+  },
+  {
+    path: "/add-subcategories",
+    name: "addsub",
+    component: AddsubView,
+  },
+  {
+    path: "/reports",
+    name: "reports",
+    component: ReportsView,
   },
 ];
 

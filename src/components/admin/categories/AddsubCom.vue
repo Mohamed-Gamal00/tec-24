@@ -10,7 +10,9 @@
                 style="border-radius: 0"
               >
                 <div class="mt-2 float-left">
-                  <strong class="card-title mb-0 text-white">اضافة قسم </strong>
+                  <strong class="card-title mb-0 text-white"
+                    >اضافة قسم فرعي
+                  </strong>
                 </div>
                 <button class="btn float-right click">
                   <strong class="float-right m-0 p-0">اضافة</strong>
@@ -29,7 +31,13 @@
                       <form>
                         <div class="form-row">
                           <div class="form-group col-md-12">
-                            <label for="text">اسم القسم</label>
+                            <label for="text">القسم الرئيسي</label>
+                            <input type="text" class="form-control" id="text" />
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-12">
+                            <label for="text">القسم الفرعي</label>
                             <input type="text" class="form-control" id="text" />
                           </div>
                         </div>
@@ -40,43 +48,6 @@
                             id="exampleFormControlTextarea1"
                             rows="3"
                           ></textarea>
-                        </div>
-                        <!-- مرئي / غير مرئي -->
-                        <div
-                          class="form-row mr-5 my-4"
-                          style="position: relative; right: 17px"
-                        >
-                          <div class="form-check">
-                            <input
-                              class="form-check-input"
-                              type="radio"
-                              name="exampleRadios"
-                              id="exampleRadios1"
-                              value="option1"
-                              checked
-                            />
-                            <label
-                              class="form-check-label p-0"
-                              for="exampleRadios1"
-                            >
-                              مرئي
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input
-                              class="form-check-input"
-                              type="radio"
-                              name="exampleRadios"
-                              id="exampleRadios2"
-                              value="option2"
-                            />
-                            <label
-                              class="form-check-label p-0"
-                              for="exampleRadios2"
-                            >
-                              غير مرئي
-                            </label>
-                          </div>
                         </div>
                         <!-- image -->
                         <div class="row">
@@ -123,7 +94,7 @@
 
 <script>
 export default {
-  name: "AddcatCom",
+  name: "AddsubCom",
   data() {
     return {};
   },

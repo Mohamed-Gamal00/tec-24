@@ -9,7 +9,7 @@
                 class="card-header pt-3 pb-3 border-0 bg-purple"
                 style="border-radius: 0"
               >
-                <div class="btn float-left">
+                <div class="mt-2 float-left">
                   <strong class="card-title mb-0 text-white">الاقسام </strong>
                 </div>
                 <router-link :to="{ name: 'addcat' }">

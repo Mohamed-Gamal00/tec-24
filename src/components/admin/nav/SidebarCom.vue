@@ -187,6 +187,20 @@
               </ul>
             </li>
           </ul>
+          <!-- التقارير -->
+          <ul class="navbar-nav flex-fill w-100 mb-2 small">
+            <li class="nav-item dropdown">
+              <router-link
+                class="text-white mb-1 nav-link"
+                :to="{ name: 'reports' }"
+              >
+                <li class="pe-2">
+                  <FontAwesome icon="triangle-exclamation" class="fe-16" />
+                  <span class="ml-3 item-text">التقارير</span>
+                </li>
+              </router-link>
+            </li>
+          </ul>
         </nav>
       </aside>
     </div>
