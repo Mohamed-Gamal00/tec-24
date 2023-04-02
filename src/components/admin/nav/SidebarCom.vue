@@ -201,6 +201,62 @@
               </router-link>
             </li>
           </ul>
+          <!-- المحادثات -->
+          <ul class="navbar-nav flex-fill w-100 mb-2 small">
+            <li class="nav-item dropdown">
+              <router-link
+                class="text-white mb-1 nav-link"
+                :to="{ name: 'conversation' }"
+              >
+                <li class="pe-2">
+                  <FontAwesome icon="comment" class="fe-16" />
+                  <span class="ml-3 item-text">المحادثات</span>
+                </li>
+              </router-link>
+            </li>
+          </ul>
+          <!-- المقالات -->
+          <ul class="navbar-nav flex-fill w-100 mb-2 small">
+            <li class="nav-item dropdown">
+              <a
+                class="dropdown-toggle text-white mb-1 nav-link"
+                href="#articles"
+                data-toggle="collapse"
+                aria-expanded="false"
+              >
+                <li class="pe-2">
+                  <FontAwesome icon="users" class="fe-16" />
+
+                  <span class="ml-3 item-text">المقالات</span>
+                </li>
+              </a>
+              <ul class="collapse list-unstyled pl-4 w-100" id="articles">
+                <router-link :to="{ name: 'articles' }">
+                  <li class="nav-item">
+                    <a class="nav-link pl-3"
+                      ><span class="ml-1 item-text fs-10"
+                        >تصفح المقالات</span
+                      ></a
+                    >
+                  </li>
+                </router-link>
+                <router-link :to="{ name: 'create' }">
+                  <li class="nav-item">
+                    <a class="nav-link pl-3"
+                      ><span class="ml-1 item-text fs-10">التعليقات</span></a
+                    >
+                  </li>
+                </router-link>
+                <router-link :to="{ name: 'create' }">
+                  <li class="nav-item">
+                    <a class="nav-link pl-3"
+                      ><span class="ml-1 item-text fs-10">انشاء مقالة</span></a
+                    >
+                  </li>
+                </router-link>
+              </ul>
+            </li>
+          </ul>
         </nav>
       </aside>
     </div>

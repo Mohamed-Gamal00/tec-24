@@ -32,6 +32,10 @@ import AddcatView from "../views/admin/categories/AddcatView.vue";
 import SubcategoriesView from "../views/admin/categories/SubcategoriesView.vue";
 import AddsubView from "../views/admin/categories/AddsubView.vue";
 import ReportsView from "../views/admin/reports/ReportsView.vue";
+import ConversationView from "../views/admin/conversation/ConversationView.vue";
+import ArticlesView from "../views/admin/articles/ArticlesView.vue";
+import CreateArticleView from "../views/admin/articles/CreateArticleView.vue";
+
 const routes = [
   {
     path: "/",
@@ -198,6 +202,21 @@ const routes = [
     path: "/reports",
     name: "reports",
     component: ReportsView,
+  },
+  {
+    path: "/conversation",
+    name: "conversation",
+    component: ConversationView,
+  },
+  {
+    path: "/articles",
+    name: "articles",
+    component: ArticlesView,
+  },
+  {
+    path: "/create",
+    name: "create",
+    component: CreateArticleView,
   },
 ];
 
